@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:fRating="clr-namespace:Rating;assembly=Rating"
+             x:Class="RCFeedback.MainPage">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="SandyBrown" Offset="0.5" />
+            <GradientStop Color="SaddleBrown" Offset="1.5" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ScrollView>
+        <StackLayout>
+            <Label Text="RoyalCraft Furnishings Feedback"
+                   FontSize="45"
+                   FontFamily="Lobster-Regular"
+                   HorizontalOptions="Center">
+            </Label>
+
+
+            <Frame Margin="10" Padding="10" HasShadow="True">
+                <StackLayout>
+                    <Label Text="1. Оцените качество мебели"
+                           FontSize="38"
+                           FontFamily="Lobster-Regular"
+                           HorizontalOptions="Center">
+                    </Label>
+                    <fRating:RatingBar SelectedStarValue="5"
+                                        ImageHeight="100"
+                                        ImageWidth="100"
+                                        HorizontalOptions="Center"
+                                        FlowDirection="LeftToRight"
+                                        EmptyStarImage="sofa_10726196"
+                                        FillStarImage="sofa_10726196_fill">
+                    </fRating:RatingBar>
+                </StackLayout>
+            </Frame>
+            
+            
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
+
