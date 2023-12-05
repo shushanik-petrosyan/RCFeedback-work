@@ -37,8 +37,77 @@
                     </fRating:RatingBar>
                 </StackLayout>
             </Frame>
-            
-            
+
+            <Frame Margin="10" Padding="10" HasShadow="True">
+                <StackLayout>
+                    <Label Text="2. Оцените дизайн и эргономику мебели"
+               FontSize="38"
+               FontFamily="Lobster-Regular"
+               HorizontalOptions="Center">
+                    </Label>
+                    <fRating:RatingBar SelectedStarValue="5"
+                            ImageHeight="100"
+                            ImageWidth="100"
+                            HorizontalOptions="Center"
+                            FlowDirection="LeftToRight"
+                            EmptyStarImage="sofa_10726196"
+                            FillStarImage="sofa_10726196_fill">
+                    </fRating:RatingBar>
+                </StackLayout>
+            </Frame>
+
+
+            <Frame Margin="10" Padding="10" HasShadow="True">
+                <StackLayout>
+                    <Label Text="3. Оцените ценовую политику"
+               FontSize="38"
+               FontFamily="Lobster-Regular"
+               HorizontalOptions="Center">
+                    </Label>
+                    <fRating:RatingBar SelectedStarValue="5"
+                            ImageHeight="100"
+                            ImageWidth="100"
+                            HorizontalOptions="Center"
+                            FlowDirection="LeftToRight"
+                            EmptyStarImage="sofa_10726196"
+                            FillStarImage="sofa_10726196_fill">
+                    </fRating:RatingBar>
+                </StackLayout>
+            </Frame>
+
+            <Frame Margin="10" Padding="10" HasShadow="True">
+                <StackLayout>
+                    <Label Text="4. Оцените процесс доставки и установки мебели"
+               FontSize="36"
+               FontFamily="Lobster-Regular"
+               HorizontalOptions="CenterAndExpand">
+                    </Label>
+                    <fRating:RatingBar SelectedStarValue="5"
+                            ImageHeight="100"
+                            ImageWidth="100"
+                            HorizontalOptions="Center"
+                            FlowDirection="LeftToRight"
+                            EmptyStarImage="sofa_10726196"
+                            FillStarImage="sofa_10726196_fill">
+                    </fRating:RatingBar>
+                </StackLayout>
+            </Frame>
+
+            <Frame Margin="10" Padding="10" HasShadow="True">
+                <StackLayout>
+                    <Label Text="5. Добавьте свой комментарий"
+               FontSize="38"
+               FontFamily="Lobster-Regular"
+               HorizontalOptions="Center">
+                    </Label>
+                    <Entry Placeholder="Введите ваш комментарий"
+               FontSize="20"
+               Margin="5,10,5,10"
+               HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+            </Frame>
+
+
         </StackLayout>
     </ScrollView>
 </ContentPage>
