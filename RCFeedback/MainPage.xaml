@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Xamarin.CommunityToolkit.Extensions;assembly=Xamarin.CommunityToolkit"
              xmlns:fRating="clr-namespace:Rating;assembly=Rating"
              x:Class="RCFeedback.MainPage">
 
@@ -101,13 +102,9 @@
 
 
             <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand">
-                <!-- прозрачный красный цвет, где 80 - уровень прозрачности -->
                 <StackLayout BackgroundColor="Bisque" >
-                    <!-- устанавливаем цвет здесь -->
                     <Label  Text="5. Добавьте свой комментарий" FontSize="38" FontFamily="Lobster-Regular" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
-
-
-                    <Editor Placeholder="Введите ваш комментарий" FontSize="20" Margin="5,10,5,10" HorizontalOptions="FillAndExpand"  HeightRequest="110"/>
+                    <Editor x:Name="MyEditor" TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" FontSize="20" Margin="5,10,5,10" HorizontalOptions="FillAndExpand" HeightRequest="110"/>
                 </StackLayout>
             </Frame>
 

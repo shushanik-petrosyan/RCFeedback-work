@@ -28,4 +28,8 @@
             <Button Text="Сохранить" Clicked="AddItemButton"/>
         </StackLayout>
 
-</ContentPage>
+</ContentPage>
+
+
+
+
