@@ -20,8 +20,8 @@
             </Label>
 
 
-            <Frame Margin="10" Padding="10" HasShadow="True">
-                <StackLayout>
+            <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood">
+                <StackLayout BackgroundColor="Bisque" >
                     <Label Text="1. Оцените качество мебели"
                            FontSize="38"
                            FontFamily="Lobster-Regular"
@@ -38,8 +38,8 @@
                 </StackLayout>
             </Frame>
 
-            <Frame Margin="10" Padding="10" HasShadow="True">
-                <StackLayout>
+            <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood">
+                <StackLayout BackgroundColor="Bisque" >
                     <Label Text="2. Оцените дизайн и эргономику мебели"
                FontSize="38"
                FontFamily="Lobster-Regular"
@@ -57,8 +57,8 @@
             </Frame>
 
 
-            <Frame Margin="10" Padding="10" HasShadow="True">
-                <StackLayout>
+            <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood">
+                <StackLayout BackgroundColor="Bisque" >
                     <Label Text="3. Оцените ценовую политику"
                FontSize="38"
                FontFamily="Lobster-Regular"
@@ -75,12 +75,14 @@
                 </StackLayout>
             </Frame>
 
-            <Frame Margin="10" Padding="10" HasShadow="True">
-                <StackLayout>
-                    <Label Text="4. Оцените процесс доставки и установки мебели"
-               FontSize="36"
+            <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood">
+                <StackLayout BackgroundColor="Bisque">
+
+                    <Label Text="4. Оцените процесс доставки и установки"
+               FontSize="38"
                FontFamily="Lobster-Regular"
-               HorizontalOptions="CenterAndExpand">
+               HorizontalOptions="Center"
+                    TextColor="Black"   >
                     </Label>
                     <fRating:RatingBar SelectedStarValue="5"
                             ImageHeight="100"
@@ -91,22 +93,18 @@
                             FillStarImage="sofa_10726196_fill">
                     </fRating:RatingBar>
                 </StackLayout>
+
             </Frame>
 
-            <Frame Margin="10" Padding="10" HasShadow="True">
-                <StackLayout>
-                    <Label Text="5. Добавьте свой комментарий"
-               FontSize="38"
-               FontFamily="Lobster-Regular"
-               HorizontalOptions="Center">
-                    </Label>
-                    <Entry Placeholder="Введите ваш комментарий"
-               FontSize="20"
-               Margin="5,10,5,10"
-               HorizontalOptions="FillAndExpand"/>
+            <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood">
+                <!-- прозрачный красный цвет, где 80 - уровень прозрачности -->
+                <StackLayout BackgroundColor="Bisque" >
+                    <!-- устанавливаем цвет здесь -->
+                    
+                    <Label  Text="5. Добавьте свой комментарий" FontSize="38" FontFamily="Lobster-Regular" HorizontalOptions="Center" />
+                    <Entry Placeholder="Введите ваш комментарий" FontSize="20" Margin="5,10,5,10" HorizontalOptions="FillAndExpand"/>
                 </StackLayout>
             </Frame>
-
 
         </StackLayout>
     </ScrollView>
