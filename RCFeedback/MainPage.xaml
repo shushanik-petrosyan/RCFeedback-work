@@ -104,9 +104,11 @@
             <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand">
                 <StackLayout BackgroundColor="Bisque" >
                     <Label  Text="5. Добавьте свой комментарий" FontSize="38" FontFamily="Lobster-Regular" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
-                    <Editor x:Name="MyEditor" TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" FontSize="20" Margin="5,10,5,10" HorizontalOptions="FillAndExpand" HeightRequest="110"/>
+                    <Editor x:Name="MyEditor" TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" FontSize="20" Margin="5,10,5,10" HorizontalOptions="FillAndExpand" HeightRequest="65"/>
                 </StackLayout>
             </Frame>
+
+            <Button Text="Сохранить"/>
 
         </StackLayout>
     </ScrollView>

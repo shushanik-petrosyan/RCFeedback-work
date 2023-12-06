@@ -9,23 +9,39 @@
         </LinearGradientBrush>
     </ContentPage.Background>
 
+    
+    
         <StackLayout Margin="10,100,10,10">
-            
-            <Label
- Text="Изображение
- загружается"
- FontAttributes="Bold"
- HorizontalOptions="Center"
- FontSize="50" TextColor="Yellow"
- HorizontalTextAlignment="Center"/>
-            <Image
- Source="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
- Aspect="Fill"
+        <Label Text="RoyalCraft Furnishings Feedback"
+                   FontSize="45"
+                   FontFamily="Lobster-Regular"
+                   HorizontalOptions="Center">
+        </Label>
 
- HeightRequest="{OnPlatform iOS=300, Android=400}"
- WidthRequest="{OnPlatform iOS=300, Android=400}"
- HorizontalOptions="Center" />
-            <Button Text="Сохранить" Clicked="AddItemButton"/>
+        <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand">
+            <StackLayout BackgroundColor="Bisque" >
+                <Label  Text="1. Введите ФИО" FontSize="38" FontFamily="Lobster-Regular" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
+                <Editor TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" FontSize="20" Margin="5,10,5,10" HorizontalOptions="FillAndExpand" HeightRequest="110"/>
+            </StackLayout>
+        </Frame>
+            
+            
+        <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand">
+            <StackLayout BackgroundColor="Bisque" >
+                <Label  Text="2. Введите электронную почту" FontSize="38" FontFamily="Lobster-Regular" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
+                <Editor  TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" FontSize="20" Margin="5,10,5,10" HorizontalOptions="FillAndExpand" HeightRequest="110"/>
+            </StackLayout>
+        </Frame>
+
+        <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand">
+            <StackLayout BackgroundColor="Bisque" >
+                <Label  Text="3. Введите номер заказа" FontSize="38" FontFamily="Lobster-Regular" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
+                <Editor TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" FontSize="20" Margin="5,10,5,10" HorizontalOptions="FillAndExpand" HeightRequest="110"/>
+            </StackLayout>
+        </Frame>
+            
+
+        <Button Text="Сохранить" Clicked="AddItemButton"/>
         </StackLayout>
 
 </ContentPage>
