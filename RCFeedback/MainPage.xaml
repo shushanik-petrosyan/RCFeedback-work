@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:fRating="clr-namespace:Rating;assembly=Rating"
@@ -76,13 +76,16 @@
             </Frame>
 
             <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood">
-                <StackLayout BackgroundColor="Bisque">
+                <StackLayout BackgroundColor="Bisque" >
 
-                    <Label Text="4. Оцените процесс доставки и установки"
-               FontSize="38"
-               FontFamily="Lobster-Regular"
-               HorizontalOptions="Center"
-                    TextColor="Black"   >
+                    <Label Text="4. Оцените процесс доставки и установки мебели" 
+       FontSize="38" 
+       FontFamily="Lobster-Regular" 
+       HorizontalOptions="Center" 
+       TextColor="Black"
+       LineBreakMode="WordWrap"
+       Margin="10"
+                           Padding="6">
                     </Label>
                     <fRating:RatingBar SelectedStarValue="5"
                             ImageHeight="100"
@@ -109,4 +112,3 @@
         </StackLayout>
     </ScrollView>
 </ContentPage>
-
