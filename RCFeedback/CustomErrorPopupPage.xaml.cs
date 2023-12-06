@@ -11,7 +11,8 @@ namespace RCFeedback
     {
         public CustomErrorPopupPage()
         {
-           
+            InitializeComponent();
+            //HasSystemNavigationBar = false;
         }
 
         private void OnOkClicked(object sender, EventArgs e)
@@ -21,3 +22,6 @@ namespace RCFeedback
         }
     }
 }
+
+
+
