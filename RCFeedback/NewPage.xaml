@@ -1,0 +1,31 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="RCFeedback.NewPage">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="SandyBrown" Offset="0.5" />
+            <GradientStop Color="SaddleBrown" Offset="1.5" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+        <StackLayout Margin="10,100,10,10">
+            
+            <Label
+ Text="Изображение
+ загружается"
+ FontAttributes="Bold"
+ HorizontalOptions="Center"
+ FontSize="50" TextColor="Yellow"
+ HorizontalTextAlignment="Center"/>
+            <Image
+ Source="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
+ Aspect="Fill"
+
+ HeightRequest="{OnPlatform iOS=300, Android=400}"
+ WidthRequest="{OnPlatform iOS=300, Android=400}"
+ HorizontalOptions="Center" />
+            <Button Text="Сохранить" Clicked="AddItemButton"/>
+        </StackLayout>
+
+</ContentPage>

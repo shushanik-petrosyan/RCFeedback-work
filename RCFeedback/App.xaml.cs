@@ -10,19 +10,14 @@ namespace RCFeedback
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NewPage();
         }
 
-        protected override void OnStart()
-        {
-        }
 
-        protected override void OnSleep()
-        {
-        }
-
-        protected override void OnResume()
-        {
-        }
     }
 }
+
+
+
+
+

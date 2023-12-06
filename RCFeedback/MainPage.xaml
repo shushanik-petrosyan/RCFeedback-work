@@ -99,13 +99,15 @@
 
             </Frame>
 
-            <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood">
+
+            <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand">
                 <!-- прозрачный красный цвет, где 80 - уровень прозрачности -->
                 <StackLayout BackgroundColor="Bisque" >
                     <!-- устанавливаем цвет здесь -->
-                    
-                    <Label  Text="5. Добавьте свой комментарий" FontSize="38" FontFamily="Lobster-Regular" HorizontalOptions="Center" />
-                    <Entry Placeholder="Введите ваш комментарий" FontSize="20" Margin="5,10,5,10" HorizontalOptions="FillAndExpand"/>
+                    <Label  Text="5. Добавьте свой комментарий" FontSize="38" FontFamily="Lobster-Regular" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
+
+
+                    <Editor Placeholder="Введите ваш комментарий" FontSize="20" Margin="5,10,5,10" HorizontalOptions="FillAndExpand"  HeightRequest="110"/>
                 </StackLayout>
             </Frame>
 
