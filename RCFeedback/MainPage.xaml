@@ -108,7 +108,12 @@
                 </StackLayout>
             </Frame>
 
-            <Button Text="Сохранить"/>
+            <Button Text="Сохранить"
+        BackgroundColor="Beige"
+        HorizontalOptions="Center"
+        WidthRequest="120"
+        HeightRequest="50"
+        CornerRadius="10" />
 
         </StackLayout>
     </ScrollView>

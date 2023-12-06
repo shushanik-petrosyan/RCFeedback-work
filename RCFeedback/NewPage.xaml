@@ -1,4 +1,5 @@
-﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+﻿
+    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               x:Class="RCFeedback.NewPage">
 
@@ -21,7 +22,7 @@
         <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand">
             <StackLayout BackgroundColor="Bisque" >
                 <Label  Text="1. Введите ФИО" FontSize="38" FontFamily="Lobster-Regular" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
-                <Editor TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" FontSize="20" Margin="5,10,5,10" HorizontalOptions="FillAndExpand" HeightRequest="110"/>
+                <Editor x:Name="NameEditor"  TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" FontSize="20" Margin="5,10,5,10" HorizontalOptions="FillAndExpand" HeightRequest="110"/>
             </StackLayout>
         </Frame>
             
@@ -29,20 +30,27 @@
         <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand">
             <StackLayout BackgroundColor="Bisque" >
                 <Label  Text="2. Введите электронную почту" FontSize="38" FontFamily="Lobster-Regular" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
-                <Editor  TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" FontSize="20" Margin="5,10,5,10" HorizontalOptions="FillAndExpand" HeightRequest="110"/>
+                <Editor  x:Name="EmailEditor"  TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" FontSize="20" Margin="5,10,5,10" HorizontalOptions="FillAndExpand" HeightRequest="110"/>
             </StackLayout>
         </Frame>
 
         <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand">
             <StackLayout BackgroundColor="Bisque" >
                 <Label  Text="3. Введите номер заказа" FontSize="38" FontFamily="Lobster-Regular" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
-                <Editor TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" FontSize="20" Margin="5,10,5,10" HorizontalOptions="FillAndExpand" HeightRequest="110"/>
+                <Editor x:Name="OrderNumberEditor"  TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" FontSize="20" Margin="5,10,5,10" HorizontalOptions="FillAndExpand" HeightRequest="110"/>
             </StackLayout>
         </Frame>
-            
 
-        <Button Text="Сохранить" Clicked="AddItemButton"/>
-        </StackLayout>
+
+
+        <Button Text="Сохранить"
+        BackgroundColor="Beige"
+        HorizontalOptions="Center"
+        WidthRequest="120"
+        HeightRequest="50"
+        CornerRadius="10" 
+        Clicked="AddItemButton"/>
+    </StackLayout>
 
 </ContentPage>
 

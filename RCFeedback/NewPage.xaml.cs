@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Rg.Plugins.Popup.Pages;
+using Rg.Plugins.Popup.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,10 +19,25 @@ namespace RCFeedback
             InitializeComponent();
         }
 
+
+
+
         private async void AddItemButton(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new MainPage()));
+            if (string.IsNullOrWhiteSpace(NameEditor.Text) || string.IsNullOrWhiteSpace(EmailEditor.Text) ||  string.IsNullOrWhiteSpace(OrderNumberEditor.Text))
+    {
+                // Показываем всплывающее окно
+                await PopupNavigation.Instance.PushAsync(new CustomErrorPopupPage());
+            }
+    else
+            {
+                await Navigation.PushModalAsync(new NavigationPage(new MainPage()));
+            }
         }
+
+
+
+
 
         void OnEditorTextChanged(object sender, TextChangedEventArgs e)
         {
