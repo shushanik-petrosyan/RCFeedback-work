@@ -1,8 +1,8 @@
 ﻿
     <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-              x:Class="RCFeedback.PersonalInfoPage">
-
+              x:Class="RCFeedback.PersonalInfoPage"
+                 BackgroundImageSource="logo_bezh.png">
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
             <GradientStop Color="SandyBrown" Offset="0.5" />
