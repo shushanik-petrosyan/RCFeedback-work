@@ -10,7 +10,8 @@ namespace RCFeedback
         {
             InitializeComponent();
 
-            MainPage = new NewPage();
+            MainPage = new PersonalInfoPage();
+
         }
 
 

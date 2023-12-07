@@ -12,9 +12,9 @@ using Xamarin.Forms.Xaml;
 namespace RCFeedback
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class NewPage : ContentPage
+    public partial class PersonalInfoPage : ContentPage
     {
-        public NewPage()
+        public PersonalInfoPage()
         {
             InitializeComponent();
         }
@@ -31,7 +31,7 @@ namespace RCFeedback
             }
     else
             {
-                await Navigation.PushModalAsync(new NavigationPage(new MainPage()));
+                await Navigation.PushModalAsync(new NavigationPage(new RatingPage()));
             }
         }
 

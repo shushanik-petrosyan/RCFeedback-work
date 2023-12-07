@@ -27,8 +27,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="NewPage.xaml.cs">
-      <DependentUpon>NewPage.xaml</DependentUpon>
+    <Compile Update="RatingPage.xaml.cs">
+      <DependentUpon>RatingPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="PersonalInfoPage.xaml.cs">
+      <DependentUpon>PersonalInfoPage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -36,7 +39,7 @@
     <EmbeddedResource Update="CustomErrorPopupPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="NewPage.xaml">
+    <EmbeddedResource Update="PersonalInfoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

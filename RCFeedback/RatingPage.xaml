@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:Xamarin.CommunityToolkit.Extensions;assembly=Xamarin.CommunityToolkit"
              xmlns:fRating="clr-namespace:Rating;assembly=Rating"
-             x:Class="RCFeedback.MainPage">
+             x:Class="RCFeedback.RatingPage">
 
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">

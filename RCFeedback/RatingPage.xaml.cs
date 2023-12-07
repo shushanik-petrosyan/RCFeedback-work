@@ -10,13 +10,13 @@ using Xamarin.Forms;
 
 namespace RCFeedback
 {
-    public partial class MainPage : ContentPage
+    public partial class RatingPage : ContentPage
     {
        
-        public MainPage()
+        public RatingPage()
         {
             InitializeComponent();
-            NavigationPage.SetHasNavigationBar(this, false); // скрываем NavigationBar для MainPage
+            NavigationPage.SetHasNavigationBar(this, false); // скрываем NavigationBar для RatingPage
         }
         void OnEditorTextChanged(object sender, TextChangedEventArgs e)
         {
