@@ -5,7 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-[assembly: ExportFont("Lobster-Regular.ttf", Alias = "Lobster")]
+[assembly: ExportFont("Montserrat-Medium.ttf", Alias = "Montserrat")]
+[assembly: ExportFont("Cinzel-ExtraBold.ttf", Alias = "Cinzel-ExtraBold")]
+[assembly: ExportFont("Montserrat-VariableFont_wght.ttf", Alias = "Montserrat1")]
 
 
 namespace RCFeedback

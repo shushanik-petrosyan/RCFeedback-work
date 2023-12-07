@@ -11,11 +11,19 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\Cinzel-ExtraBold.ttf" />
+    <None Remove="Fonts\Cinzel-SemiBold.ttf" />
     <None Remove="Fonts\Lobster-Regular.ttf" />
+    <None Remove="Fonts\Montserrat-Medium.ttf" />
+    <None Remove="Fonts\Montserrat-VariableFont_wght.ttf" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="Fonts\Cinzel-ExtraBold.ttf" />
+    <EmbeddedResource Include="Fonts\Cinzel-SemiBold.ttf" />
     <EmbeddedResource Include="Fonts\Lobster-Regular.ttf" />
+    <EmbeddedResource Include="Fonts\Montserrat-Medium.ttf" />
+    <EmbeddedResource Include="Fonts\Montserrat-VariableFont_wght.ttf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -37,6 +45,9 @@
 
   <ItemGroup>
     <EmbeddedResource Update="CustomErrorPopupPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Menu.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="PersonalInfoPage.xaml">

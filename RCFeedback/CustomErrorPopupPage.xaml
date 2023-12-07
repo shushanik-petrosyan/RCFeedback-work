@@ -9,8 +9,10 @@
               AbsoluteLayout.LayoutFlags="PositionProportional"
               BackgroundColor="Beige" Padding="20">
             <StackLayout>
-                <Label Text="Ошибка" FontSize="Large" FontAttributes="Bold" />
-                <Label Text="Пожалуйста, заполните все поля" />
+                <Label Text="Ошибка" FontSize="Large" FontAttributes="Bold"
+                       FontFamily="Montserrat"/>
+                <Label Text="Пожалуйста, заполните все поля" 
+                       FontFamily="Montserrat"/>
                 <Button Text="OK"
         BackgroundColor="BurlyWood"
         HorizontalOptions="Center"

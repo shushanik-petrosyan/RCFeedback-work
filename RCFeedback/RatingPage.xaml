@@ -15,26 +15,29 @@
     <ScrollView>
         <StackLayout>
             <Label Text="RoyalCraft Furnishings Feedback"
-                   FontSize="45"
-                   FontFamily="Lobster-Regular"
-                   HorizontalOptions="Center">
-            </Label>
-
+               FontSize="48"
+               FontFamily="Cinzel-ExtraBold"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"
+                   VerticalOptions="Start"
+               TextColor="Black"
+              />
 
             <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood">
                 <StackLayout BackgroundColor="Bisque" >
                     <Label Text="1. Оцените качество мебели"
-                           FontSize="38"
-                           FontFamily="Lobster-Regular"
+                           FontSize="30"
+                           FontFamily="Montserrat"
                            HorizontalOptions="Center">
                     </Label>
-                    <fRating:RatingBar SelectedStarValue="5"
-                                        ImageHeight="100"
-                                        ImageWidth="100"
-                                        HorizontalOptions="Center"
-                                        FlowDirection="LeftToRight"
-                                        EmptyStarImage="sofa_10726196"
-                                        FillStarImage="sofa_10726196_fill">
+                    <fRating:RatingBar 
+                    SelectedStarValue="5"
+                    ImageHeight="100"
+                    ImageWidth="100"
+                    HorizontalOptions="Center"
+                    FlowDirection="LeftToRight"
+                    EmptyStarImage="sofa_10726196"
+                    FillStarImage="sofa_10726196_fill">
                     </fRating:RatingBar>
                 </StackLayout>
             </Frame>
@@ -42,8 +45,8 @@
             <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood">
                 <StackLayout BackgroundColor="Bisque" >
                     <Label Text="2. Оцените дизайн и эргономику мебели"
-               FontSize="38"
-               FontFamily="Lobster-Regular"
+               FontSize="30"
+               FontFamily="Montserrat"
                HorizontalOptions="Center">
                     </Label>
                     <fRating:RatingBar SelectedStarValue="5"
@@ -61,8 +64,8 @@
             <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood">
                 <StackLayout BackgroundColor="Bisque" >
                     <Label Text="3. Оцените ценовую политику"
-               FontSize="38"
-               FontFamily="Lobster-Regular"
+               FontSize="30"
+               FontFamily="Montserrat"
                HorizontalOptions="Center">
                     </Label>
                     <fRating:RatingBar SelectedStarValue="5"
@@ -80,12 +83,11 @@
                 <StackLayout BackgroundColor="Bisque" >
 
                     <Label Text="4. Оцените процесс доставки и установки мебели" 
-       FontSize="38" 
-       FontFamily="Lobster-Regular" 
+       FontSize="30" 
+       FontFamily="Montserrat" 
        HorizontalOptions="Center" 
-       TextColor="Black"
+                           HorizontalTextAlignment="Center"
        LineBreakMode="WordWrap"
-       Margin="10"
                            Padding="6">
                     </Label>
                     <fRating:RatingBar SelectedStarValue="5"
@@ -103,17 +105,19 @@
 
             <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand">
                 <StackLayout BackgroundColor="Bisque" >
-                    <Label  Text="5. Добавьте свой комментарий" FontSize="38" FontFamily="Lobster-Regular" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
-                    <Editor x:Name="MyEditor" TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" FontSize="20" Margin="5,10,5,10" HorizontalOptions="FillAndExpand" HeightRequest="65"/>
+                    <Label  Text="5. Добавьте свой комментарий" FontSize="30" FontFamily="Montserrat" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
+                    <Editor x:Name="MyEditor"  FontFamily="Montserrat" TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" FontSize="20" Margin="5,10,5,10" HorizontalOptions="FillAndExpand" HeightRequest="65"/>
                 </StackLayout>
             </Frame>
 
             <Button Text="Сохранить"
-        BackgroundColor="Beige"
+        BackgroundColor="#FEE4C3"
         HorizontalOptions="Center"
-        WidthRequest="120"
-        HeightRequest="50"
-        CornerRadius="10" />
+        WidthRequest="140"
+        HeightRequest="60"
+        CornerRadius="10" 
+                FontFamily="Montserrat"
+                    />
 
         </StackLayout>
     </ScrollView>

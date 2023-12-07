@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+[assembly: ExportFont("Montserrat-Medium.ttf", Alias = "Montserrat")]
+[assembly: ExportFont("Cinzel-ExtraBold.ttf", Alias = "Cinzel-ExtraBold")]
+[assembly: ExportFont("Montserrat-VariableFont_wght.ttf", Alias = "Montserrat1")]
+
 
 namespace RCFeedback
 {
@@ -17,6 +21,7 @@ namespace RCFeedback
         public PersonalInfoPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
 
@@ -48,7 +53,7 @@ namespace RCFeedback
             int lineCount = editor.Text.Split(new string[] { Environment.NewLine }, StringSplitOptions.None).Length;
 
             // Задаем минимальную и максимальную высоту
-            int minHeight = 110;
+            int minHeight = 50;
             int maxHeight = 10000;
 
             // Вычисляем новую высоту

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RCFeedback.Menu">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="SandyBrown" Offset="0.5" />
+            <GradientStop Color="SaddleBrown" Offset="1.5" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <StackLayout VerticalOptions="Start">
+        <Image Source="logo_bezh.png" 
+               Margin="90"/>
+
+        <Label Text="RoyalCraft Furnishings Feedback"
+               FontSize="48"
+               FontFamily="Cinzel-ExtraBold"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"
+               TextColor="Black"
+               Margin=" 0, -80,0,0"/>
+        <Label Text="Благодарим Вас за покупку! "
+               FontSize="30"
+               FontFamily="Montserrat"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"
+               Margin="0, 40, 0,0"
+               TextColor="Black"
+               />
+        <Label Text="Пройдите опрос об удовлетворённости услугами компании."
+               FontSize="30"
+               FontFamily="Montserrat"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"
+               Margin="0, 0, 0,0"
+               TextColor="Black"
+               />
+        <Button Text="Начать"
+        BackgroundColor="#FEE4C3"
+        HorizontalOptions="Center"
+        WidthRequest="300"
+        FontFamily="Montserrat"
+        HeightRequest="60"
+        Margin="0, 40, 0,0"
+        CornerRadius="10"
+                Clicked="StartButton"
+                />
+    </StackLayout>
+</ContentPage>

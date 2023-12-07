@@ -10,7 +10,7 @@ namespace RCFeedback
         {
             InitializeComponent();
 
-            MainPage = new PersonalInfoPage();
+            MainPage = new Menu();
 
         }
 

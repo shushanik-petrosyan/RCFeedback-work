@@ -10,48 +10,64 @@
         </LinearGradientBrush>
     </ContentPage.Background>
 
-    
-    
-        <StackLayout Margin="10,100,10,10">
-        <Label Text="RoyalCraft Furnishings Feedback"
-                   FontSize="45"
-                   FontFamily="Lobster-Regular"
-                   HorizontalOptions="Center">
-        </Label>
-
-        <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand">
-            <StackLayout BackgroundColor="Bisque" >
-                <Label  Text="1. Введите ФИО" FontSize="38" FontFamily="Lobster-Regular" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
-                <Editor x:Name="NameEditor"  TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" FontSize="20" Margin="5,10,5,10" HorizontalOptions="FillAndExpand" HeightRequest="110"/>
+    <ScrollView>
+        <StackLayout Margin="10,0,10,10" Orientation="Horizontal">
+            <StackLayout>
+                <Image Source="logo_bezh.png" 
+               HeightRequest="200"
+               WidthRequest="200"/>
             </StackLayout>
-        </Frame>
             
-            
-        <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand">
-            <StackLayout BackgroundColor="Bisque" >
-                <Label  Text="2. Введите электронную почту" FontSize="38" FontFamily="Lobster-Regular" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
-                <Editor  x:Name="EmailEditor"  TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" FontSize="20" Margin="5,10,5,10" HorizontalOptions="FillAndExpand" HeightRequest="110"/>
+            <StackLayout>
+                <Label Text="RoyalCraft Furnishings Feedback"
+               FontSize="48"
+               FontFamily="Cinzel-ExtraBold"
+               HorizontalOptions="Start"
+               HorizontalTextAlignment="Start"
+               TextColor="Black"
+               CharacterSpacing="5"
+               Margin="0,0,0,0" />
+                <StackLayout Margin="0,0,0,0">
+                <StackLayout Margin="-200,150,0,0">
+            <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand">
+                <StackLayout BackgroundColor="Bisque">
+                    <Label Text="1. Введите ФИО" FontSize="30" FontFamily="Montserrat" HorizontalOptions="Center" LineBreakMode="WordWrap" />
+                    <Editor x:Name="NameEditor" FontFamily="Montserrat" TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" FontSize="20" Margin="5,30,5,10" HorizontalOptions="FillAndExpand" HeightRequest="50" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+
+        <StackLayout Margin="-200,20,0,0">
+            <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand">
+                <StackLayout BackgroundColor="Bisque">
+                    <Label Text="2. Введите электронную почту" FontSize="30" FontFamily="Montserrat" HorizontalOptions="Center" LineBreakMode="WordWrap" />
+                    <Editor x:Name="EmailEditor" FontFamily="Montserrat" TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" FontSize="20" Margin="5,30,5,10" HorizontalOptions="FillAndExpand" HeightRequest="50" />
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+
+        <StackLayout Margin="-200,20,0,0">
+            <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand">
+                <StackLayout BackgroundColor="Bisque">
+                    <Label Text="3. Введите номер заказа" FontSize="30" FontFamily="Montserrat" HorizontalOptions="Center" LineBreakMode="WordWrap" />
+                    <Editor x:Name="OrderNumberEditor" FontFamily="Montserrat" Placeholder="Введите ваш комментарий" FontSize="20" Margin="5,30,5,10" HorizontalOptions="FillAndExpand" HeightRequest="50" />
+                </StackLayout>
+                
+            </Frame>
+             <Button Text="Сохранить"
+            BackgroundColor="#FEE4C3"
+            HorizontalOptions="Center"
+            WidthRequest="140"
+            HeightRequest="60"
+            CornerRadius="10"
+            FontFamily="Montserrat"
+            Clicked="AddItemButton" />
+                    </StackLayout>
+
+                </StackLayout>
             </StackLayout>
-        </Frame>
-
-        <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand">
-            <StackLayout BackgroundColor="Bisque" >
-                <Label  Text="3. Введите номер заказа" FontSize="38" FontFamily="Lobster-Regular" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
-                <Editor x:Name="OrderNumberEditor"  TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" FontSize="20" Margin="5,10,5,10" HorizontalOptions="FillAndExpand" HeightRequest="110"/>
-            </StackLayout>
-        </Frame>
-
-
-
-        <Button Text="Сохранить"
-        BackgroundColor="Beige"
-        HorizontalOptions="Center"
-        WidthRequest="120"
-        HeightRequest="50"
-        CornerRadius="10" 
-        Clicked="AddItemButton"/>
-    </StackLayout>
-
+        </StackLayout>
+        </ScrollView>
 </ContentPage>
 
 
