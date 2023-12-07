@@ -47,7 +47,7 @@ namespace RCFeedback
         void OnEditorTextChanged(object sender, TextChangedEventArgs e)
         {
             var editor = (Editor)sender;
-            int lineHeight = 20; // Замените это значение на фактическую высоту строки в вашем редакторе
+            int lineHeight = 20; // Фактическая высоту строки в редакторе
 
             // Вычисляем количество строк в текстовом поле
             int lineCount = editor.Text.Split(new string[] { Environment.NewLine }, StringSplitOptions.None).Length;
