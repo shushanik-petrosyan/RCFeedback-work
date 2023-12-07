@@ -2,7 +2,7 @@
     <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
               x:Class="RCFeedback.PersonalInfoPage"
-                 BackgroundImageSource="logo_bezh.png">
+                 BackgroundImageSource="background.jpg">
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
             <GradientStop Color="SandyBrown" Offset="0.5" />
@@ -14,8 +14,9 @@
         <StackLayout Margin="10,0,10,10" Orientation="Horizontal">
             <StackLayout>
                 <Image Source="logo_bezh.png" 
-               HeightRequest="200"
-               WidthRequest="200"/>
+               HeightRequest="150"
+               WidthRequest="150"
+               Margin="0,35,0,0"        />
             </StackLayout>
             
             <StackLayout>
@@ -25,10 +26,10 @@
                HorizontalOptions="Start"
                HorizontalTextAlignment="Start"
                TextColor="Black"
-               CharacterSpacing="5"
+               CharacterSpacing="1.5"
                Margin="0,0,0,0" />
                 <StackLayout Margin="0,0,0,0">
-                <StackLayout Margin="-200,150,0,0">
+                <StackLayout Margin="-150,150,0,0">
             <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand">
                 <StackLayout BackgroundColor="Bisque">
                     <Label Text="1. Введите ФИО" FontSize="30" FontFamily="Montserrat" HorizontalOptions="Center" LineBreakMode="WordWrap" />
@@ -37,7 +38,7 @@
             </Frame>
         </StackLayout>
 
-        <StackLayout Margin="-200,20,0,0">
+        <StackLayout Margin="-150,20,0,0">
             <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand">
                 <StackLayout BackgroundColor="Bisque">
                     <Label Text="2. Введите электронную почту" FontSize="30" FontFamily="Montserrat" HorizontalOptions="Center" LineBreakMode="WordWrap" />
@@ -46,7 +47,7 @@
             </Frame>
         </StackLayout>
 
-        <StackLayout Margin="-200,20,0,0">
+        <StackLayout Margin="-150,20,0,0">
             <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand">
                 <StackLayout BackgroundColor="Bisque">
                     <Label Text="3. Введите номер заказа" FontSize="30" FontFamily="Montserrat" HorizontalOptions="Center" LineBreakMode="WordWrap" />
