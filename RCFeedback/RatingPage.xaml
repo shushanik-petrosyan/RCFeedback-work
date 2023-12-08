@@ -23,7 +23,7 @@
                TextColor="Black"
               />
 
-            <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood">
+            <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" CornerRadius="10">
                 <StackLayout BackgroundColor="Bisque" >
                     <Label Text="1. Оцените качество мебели"
                            FontSize="30"
@@ -42,7 +42,7 @@
                 </StackLayout>
             </Frame>
 
-            <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood">
+            <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" CornerRadius="10">
                 <StackLayout BackgroundColor="Bisque" >
                     <Label Text="2. Оцените дизайн и эргономику мебели"
                FontSize="30"
@@ -61,7 +61,7 @@
             </Frame>
 
 
-            <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood">
+            <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" CornerRadius="10">
                 <StackLayout BackgroundColor="Bisque" >
                     <Label Text="3. Оцените ценовую политику"
                FontSize="30"
@@ -79,7 +79,7 @@
                 </StackLayout>
             </Frame>
 
-            <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood">
+            <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" CornerRadius="10">
                 <StackLayout BackgroundColor="Bisque" >
 
                     <Label Text="4. Оцените процесс доставки и установки мебели" 
@@ -103,7 +103,7 @@
             </Frame>
 
 
-            <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand">
+            <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand" CornerRadius="10">
                 <StackLayout BackgroundColor="Bisque" >
                     <Label  Text="5. Добавьте свой комментарий" FontSize="30" FontFamily="Montserrat" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
                     <Editor x:Name="MyEditor"  FontFamily="Montserrat" TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" FontSize="20" Margin="5,10,5,10" HorizontalOptions="FillAndExpand" HeightRequest="65"/>
@@ -117,6 +117,7 @@
         HeightRequest="60"
         CornerRadius="10" 
                 FontFamily="Montserrat"
+                    Clicked="EndButton"
                     />
 
         </StackLayout>

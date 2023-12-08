@@ -41,6 +41,11 @@ namespace RCFeedback
             editor.HeightRequest = newHeight;
         }
 
+        private async void EndButton(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new End())); // При нажатии кнопки "StartButton" открываем страницу PersonalInfoPage 
+
+        }
 
     }
 }

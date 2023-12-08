@@ -1,0 +1,14 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="RCFeedback.End"
+                 BackgroundImageSource="background.jpg">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="SandyBrown" Offset="0.5" />
+            <GradientStop Color="SaddleBrown" Offset="1.5" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <Label Text="Благодарим за оставленный отзыв!&#x0a;Предоставляем промокод на скидку 10% на повторный заказ.&#x0a;Назовите его менеджеру или введите на сайте при оформлении услуги.&#x0a;Промокод действителен до 31.12.2023" />
+
+</ContentPage>
