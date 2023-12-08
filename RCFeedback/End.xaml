@@ -1,18 +1,35 @@
-﻿<ContentPage
-    xmlns="http://xamarin.com/schemas/2014/forms"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-    x:Class="RCFeedback.End"
-    BackgroundImageSource="background.jpg">
-
-
-    <StackLayout Margin="0,200,0,0">
-
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+              x:Class="RCFeedback.End"
+                 BackgroundImageSource="background.jpg">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <GradientStop Color="SandyBrown" Offset="0.5" />
+            <GradientStop Color="SaddleBrown" Offset="1.5" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <StackLayout Margin=" 0,200,0, 0">
+        <Label Text="Благодарим за оставленный отзыв!&#x0a;Предоставляем промокод на скидку 10% на повторный заказ.&#x0a;Назовите его менеджеру или введите на сайте при оформлении услуги.&#x0a;Промокод действителен до 31.12.2023"
+                          FontSize="30"
+           FontFamily="Montserrat"
+           HorizontalOptions="Center"
+           HorizontalTextAlignment="Center"
+           TextColor="Black"/>
+        <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand" CornerRadius="10">
+            <StackLayout BackgroundColor="Bisque">
+                <Label Text="ОТЗЫВ23" InputTransparent="True" FontSize="30" FontFamily="Montserrat" HorizontalOptions="Center" LineBreakMode="WordWrap" />
+            </StackLayout>
+        </Frame>
         <ffimageloading:CachedImage
-            Source="dog.gif"
-            HeightRequest="100"
-            WidthRequest="100"
-            HorizontalOptions="Center"
-            Aspect="Fill"/>
+      Source="dog.gif"
+      HeightRequest="300"
+      WidthRequest="300"
+      HorizontalOptions="Center"
+      Aspect="Fill"/>
+
     </StackLayout>
+
+
+
 </ContentPage>
