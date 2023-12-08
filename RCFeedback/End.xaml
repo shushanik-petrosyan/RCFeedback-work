@@ -9,8 +9,15 @@
             <GradientStop Color="SaddleBrown" Offset="1.5" />
         </LinearGradientBrush>
     </ContentPage.Background>
-    <StackLayout Margin=" 0,200,0, 0">
-        <Label Text="Благодарим за оставленный отзыв!&#x0a;Предоставляем промокод на скидку 10% на повторный заказ.&#x0a;Назовите его менеджеру или введите на сайте при оформлении услуги.&#x0a;Промокод действителен до 31.12.2023"
+    <StackLayout Margin=" 0,280,0, 0">
+        <Label Text="Благодарим за оставленный отзыв!" 
+               FontFamily="Montserrat-Bold" 
+               FontSize="45"
+                TextColor="Black"
+               HorizontalOptions="Center"
+HorizontalTextAlignment="Center"
+               />
+        <Label Text="Предоставляем промокод на скидку 10% на повторный заказ.&#x0a;Назовите его менеджеру или введите на сайте при оформлении услуги.&#x0a;Промокод действителен до 31.12.2023"
                           FontSize="30"
            FontFamily="Montserrat"
            HorizontalOptions="Center"
@@ -24,7 +31,7 @@
         <ffimageloading:CachedImage
       Source="dog.gif"
       HeightRequest="300"
-      WidthRequest="300"
+      WidthRequest="400"
       HorizontalOptions="Center"
       Aspect="Fill"/>
 

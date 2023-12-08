@@ -8,6 +8,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: ExportFont("Montserrat-Medium.ttf", Alias = "Montserrat")]
+[assembly: ExportFont("Montserrat-Bold.ttf", Alias = "Montserrat-Bold")]
 
 namespace RCFeedback
 {
