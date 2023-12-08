@@ -15,8 +15,7 @@ namespace RCFeedback.Droid
 
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-
-            // Инициализация Rg.Plugins.Popup с использованием контекста
+            FFImageLoading.Forms.Platform.CachedImageRenderer.Init(true);
             Rg.Plugins.Popup.Popup.Init(this);
 
             LoadApplication(new App());

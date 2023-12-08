@@ -9,6 +9,7 @@ namespace RCFeedback
         public App()
         {
             InitializeComponent();
+
             //Задаем страницу Menu как главную страницу нашего приложения
             MainPage = new End();
 

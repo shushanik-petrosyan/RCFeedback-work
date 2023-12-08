@@ -17,7 +17,9 @@ namespace RCFeedback
         public End()
         {
             InitializeComponent();
+
             NavigationPage.SetHasNavigationBar(this, false);
         }
+
     }
 }
