@@ -8,7 +8,27 @@
             <GradientStop Color="SaddleBrown" Offset="1.5" />
         </LinearGradientBrush>
     </ContentPage.Background>
+    <StackLayout Margin=" 0,200,0, 0">
+        <Label Text="Благодарим за оставленный отзыв!&#x0a;Предоставляем промокод на скидку 10% на повторный заказ.&#x0a;Назовите его менеджеру или введите на сайте при оформлении услуги.&#x0a;Промокод действителен до 31.12.2023"
+                          FontSize="30"
+           FontFamily="Montserrat"
+           HorizontalOptions="Center"
+           HorizontalTextAlignment="Center"
+           TextColor="Black"/>
+        <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand" CornerRadius="10">
+            <StackLayout BackgroundColor="Bisque">
+                <Label Text="ОТЗЫВ23" InputTransparent="True" FontSize="30" FontFamily="Montserrat" HorizontalOptions="Center" LineBreakMode="WordWrap" />
+            </StackLayout>
+        </Frame>
+        <Image Source="basic.gif"
+           IsAnimationPlaying="True"
+           HeightRequest="300"
+           WidthRequest="400"
+           HorizontalOptions="Center"
+           Aspect="Fill"/>
 
-    <Label Text="Благодарим за оставленный отзыв!&#x0a;Предоставляем промокод на скидку 10% на повторный заказ.&#x0a;Назовите его менеджеру или введите на сайте при оформлении услуги.&#x0a;Промокод действителен до 31.12.2023" />
+    </StackLayout>
+
+
 
 </ContentPage>
