@@ -19,7 +19,7 @@ namespace RCFeedback
         {
             InitializeComponent();
 
-            NavigationPage.SetHasNavigationBar(this, false);
+            NavigationPage.SetHasNavigationBar(this, false); // Убираем навигационную панель
         }
 
     }

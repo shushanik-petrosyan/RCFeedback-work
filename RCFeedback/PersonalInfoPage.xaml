@@ -1,8 +1,9 @@
 ﻿
     <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-              x:Class="RCFeedback.PersonalInfoPage"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 x:Class="RCFeedback.PersonalInfoPage"
                  BackgroundImageSource="background.jpg">
+        
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
             <GradientStop Color="SandyBrown" Offset="0.5" />
@@ -11,14 +12,14 @@
     </ContentPage.Background>
 
     <ScrollView>
-        <StackLayout Margin="10,0,10,10"   >
+        <StackLayout Margin="10,0,10,10">
 
             <StackLayout Orientation="Horizontal">
                 <StackLayout Orientation="Horizontal">
                 <Image Source="logo_bezh.png" 
                HeightRequest="150"
                WidthRequest="150"
-               Margin="0,0,0,0"        />
+               Margin="0,0,0,0"/>
             </StackLayout>
 
             <StackLayout Orientation="Horizontal">
@@ -29,45 +30,65 @@
                HorizontalTextAlignment="Start"
                TextColor="Black"
                CharacterSpacing="1.5"
-               Margin="0,0,0,0" />
+               Margin="0,0,0,0"/>
 
             </StackLayout>
 
             </StackLayout>
-
 
 
             <StackLayout  Orientation="Vertical">
                 <StackLayout Margin="0,0,0,0">
                     
                     <StackLayout Margin="0,150,0,0">
-                        <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand" CornerRadius="10">
-                <StackLayout BackgroundColor="Bisque">
-                                <Label Text="1. Введите ФИО" InputTransparent="True" FontSize="30" FontFamily="Montserrat" HorizontalOptions="Center" LineBreakMode="WordWrap" />
-                    <Editor x:Name="NameEditor" FontFamily="Montserrat" TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" FontSize="20" Margin="10,30,5,10" HorizontalOptions="FillAndExpand" HeightRequest="50" />
-                </StackLayout>
-            </Frame>
-        </StackLayout>
+                        
+                        <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood"
+                               HorizontalOptions="FillAndExpand" CornerRadius="10">
 
-                    <StackLayout Margin="0,20,0,0">
-                        <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand" CornerRadius="10">
+                            <!-- не до конца понимаю как привязать данные-->
+
                             <StackLayout BackgroundColor="Bisque">
-                                <Label Text="2. Введите электронную почту" InputTransparent="True" FontSize="30" FontFamily="Montserrat" HorizontalOptions="Center" LineBreakMode="WordWrap" />
-                                <Editor x:Name="EmailEditor" FontFamily="Montserrat" TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" FontSize="20" Margin="10,30,5,10" HorizontalOptions="FillAndExpand" HeightRequest="50" />
+                                <Label Text="1. Введите ФИО" InputTransparent="True" FontSize="30" 
+                                       FontFamily="Montserrat" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
+
+                                <Editor x:Name="NameEditor" FontFamily="Montserrat" 
+                                        TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" 
+                                        FontSize="20" Margin="10,30,5,10" HorizontalOptions="FillAndExpand" HeightRequest="50"
+                                        Text="{Binding Name}"/>
+                            </StackLayout>
+                        </Frame>
+                        
+                    </StackLayout>
+
+                    
+                    <StackLayout Margin="0,20,0,0">
+                        <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" 
+                               HorizontalOptions="FillAndExpand" CornerRadius="10">
+                            <StackLayout BackgroundColor="Bisque">
+                                <Label Text="2. Введите электронную почту" InputTransparent="True" FontSize="30"
+                                       FontFamily="Montserrat" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
+                                
+                                <Editor x:Name="EmailEditor" FontFamily="Montserrat"
+                                        TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий"
+                                        FontSize="20" Margin="10,30,5,10" HorizontalOptions="FillAndExpand" HeightRequest="50"/>
                             </StackLayout>
                         </Frame>
                     </StackLayout>
 
                     <StackLayout Margin="0,20,0,0">
-                        <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand" CornerRadius="10">
+                        <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" 
+                               HorizontalOptions="FillAndExpand" CornerRadius="10">
                             <StackLayout BackgroundColor="Bisque">
-                                <Label Text="3. Введите номер заказа" InputTransparent="True" FontSize="30" FontFamily="Montserrat" HorizontalOptions="Center" LineBreakMode="WordWrap" />
-                                <Editor x:Name="OrderNumberEditor"  FontFamily="Montserrat" TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" FontSize="20" Margin="10,30,5,10" HorizontalOptions="FillAndExpand" HeightRequest="50" />
+                                <Label Text="3. Введите номер заказа" InputTransparent="True" FontSize="30" 
+                                       FontFamily="Montserrat" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
+                                
+                                <Editor x:Name="OrderNumberEditor"  FontFamily="Montserrat" 
+                                        TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" 
+                                        FontSize="20" Margin="10,30,5,10" HorizontalOptions="FillAndExpand" HeightRequest="50"/>
                             </StackLayout>
                         </Frame>
                     </StackLayout>
                 </StackLayout>
-
 
 
                 <StackLayout>
@@ -78,14 +99,13 @@
             HeightRequest="60"
             CornerRadius="10"
             FontFamily="Montserrat"
-            Clicked="AddItemButton" />
+            Clicked="AddItemButton"/>
                     </StackLayout>
             </StackLayout>
 
 
-        
         </StackLayout>
-        </ScrollView>
+</ScrollView>
 </ContentPage>
 
 

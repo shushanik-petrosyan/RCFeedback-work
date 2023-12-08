@@ -117,8 +117,7 @@
         HeightRequest="60"
         CornerRadius="10" 
                 FontFamily="Montserrat"
-                    Clicked="EndButton"
-                    />
+                    Clicked="EndButton"/>
 
         </StackLayout>
     </ScrollView>
