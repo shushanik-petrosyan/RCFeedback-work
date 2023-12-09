@@ -40,8 +40,8 @@
 
                     <!-- Внутренний блок с рамкой -->
                     <StackLayout Margin="0,150,0,0">
-                        <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood"
-                               HorizontalOptions="FillAndExpand" CornerRadius="10">
+                        <Frame Margin="15" Padding="6" HasShadow="True" BackgroundColor="BurlyWood"
+                               HorizontalOptions="FillAndExpand" CornerRadius="10" HeightRequest="80">
 
                             <!-- Надпись с инструкцией -->
                             <StackLayout BackgroundColor="Bisque">
@@ -50,8 +50,8 @@
 
                                 <!-- Поле для ввода ФИО -->
                                 <Editor x:Name="NameEditor" FontFamily="Montserrat" 
-                                        TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" 
-                                        FontSize="20" Margin="10,30,5,10" HorizontalOptions="FillAndExpand" HeightRequest="50"
+                                        TextChanged="OnEditorTextChanged" Placeholder="Введите Ваше ФИО" 
+                                        FontSize="20" Margin="10,-15,5,10" HorizontalOptions="FillAndExpand" HeightRequest="50"
                                         Text="{Binding Name}"/>
                             </StackLayout>
                         </Frame>
@@ -59,32 +59,32 @@
 
                     <StackLayout Margin="0,20,0,0">
                         <!-- Всплывающее окно/рамка для ввода электронной почты -->
-                        <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" 
-           HorizontalOptions="FillAndExpand" CornerRadius="10">
+                        <Frame Margin="15" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" 
+           HorizontalOptions="FillAndExpand" CornerRadius="10" HeightRequest="80">
                             <StackLayout BackgroundColor="Bisque">
                                 <Label Text="2. Введите электронную почту" InputTransparent="True" FontSize="30"
                    FontFamily="Montserrat" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
 
                                 <!-- Поле для ввода электронной почты -->
                                 <Editor x:Name="EmailEditor" FontFamily="Montserrat"
-                    TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий"
-                    FontSize="20" Margin="10,30,5,10" HorizontalOptions="FillAndExpand" HeightRequest="50"/>
+                    TextChanged="OnEditorTextChanged" Placeholder="Введите Вашу электронную почту"
+                    FontSize="20" Margin="10,-15,5,10" HorizontalOptions="FillAndExpand" HeightRequest="50"/>
                             </StackLayout>
                         </Frame>
                     </StackLayout>
 
                     <StackLayout Margin="0,20,0,0">
                         <!-- Всплывающее окно/рамка для ввода номера заказа -->
-                        <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" 
-           HorizontalOptions="FillAndExpand" CornerRadius="10">
+                        <Frame Margin="15" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" 
+           HorizontalOptions="FillAndExpand" CornerRadius="10" HeightRequest="80" >
                             <StackLayout BackgroundColor="Bisque">
                                 <Label Text="3. Введите номер заказа" InputTransparent="True" FontSize="30" 
                    FontFamily="Montserrat" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
 
                                 <!-- Поле для ввода номера заказа -->
                                 <Editor x:Name="OrderNumberEditor"  FontFamily="Montserrat" 
-                    TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" 
-                    FontSize="20" Margin="10,30,5,10" HorizontalOptions="FillAndExpand" HeightRequest="50"/>
+                    TextChanged="OnEditorTextChanged" Placeholder="Введите номер Вашего заказа" 
+                    FontSize="20" Margin="10,-15,5,10" HorizontalOptions="FillAndExpand" HeightRequest="50"/>
                             </StackLayout>
                         </Frame>
                     </StackLayout>

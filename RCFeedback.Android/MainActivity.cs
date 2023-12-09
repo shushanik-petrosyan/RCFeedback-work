@@ -15,6 +15,7 @@ namespace RCFeedback.Droid
     [Activity(Label = "RCFeedback", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
+
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
@@ -36,7 +37,6 @@ namespace RCFeedback.Droid
             // Загрузка главного приложения
             LoadApplication(new App());
         }
-
 
 
         // Метод вызывается для обработки результатов запроса разрешений
