@@ -1,9 +1,8 @@
-﻿
-    <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 x:Class="RCFeedback.PersonalInfoPage"
-                 BackgroundImageSource="background.jpg">
-        
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RCFeedback.PersonalInfoPage"
+             BackgroundImageSource="background.jpg">
+
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
             <GradientStop Color="SandyBrown" Offset="0.5" />
@@ -14,85 +13,83 @@
     <ScrollView>
         <StackLayout Margin="10,0,10,10">
 
+            <!-- Верхний блок с логотипом и названием -->
             <StackLayout Orientation="Horizontal">
                 <StackLayout Orientation="Horizontal">
-                <Image Source="logo_bezh.png" 
-               HeightRequest="150"
-               WidthRequest="150"
-               Margin="0,0,0,0"/>
+                    <Image Source="logo_bezh.png" 
+                   HeightRequest="150"
+                   WidthRequest="150"
+                   Margin="0,0,0,0"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="RoyalCraft Furnishings Feedback"
+                   FontSize="48"
+                   FontFamily="Cinzel-ExtraBold"
+                   HorizontalOptions="Start"
+                   HorizontalTextAlignment="Start"
+                   TextColor="Black"
+                   CharacterSpacing="1.5"
+                   Margin="0,0,0,0"/>
+                </StackLayout>
             </StackLayout>
 
-            <StackLayout Orientation="Horizontal">
-                <Label Text="RoyalCraft Furnishings Feedback"
-               FontSize="48"
-               FontFamily="Cinzel-ExtraBold"
-               HorizontalOptions="Start"
-               HorizontalTextAlignment="Start"
-               TextColor="Black"
-               CharacterSpacing="1.5"
-               Margin="0,0,0,0"/>
-
-            </StackLayout>
-
-            </StackLayout>
-
-
+            <!-- Блок с вводом ФИО -->
             <StackLayout  Orientation="Vertical">
                 <StackLayout Margin="0,0,0,0">
-                    
+
+                    <!-- Внутренний блок с рамкой -->
                     <StackLayout Margin="0,150,0,0">
-                        
                         <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood"
                                HorizontalOptions="FillAndExpand" CornerRadius="10">
 
-                            <!-- не до конца понимаю как привязать данные-->
-
+                            <!-- Надпись с инструкцией -->
                             <StackLayout BackgroundColor="Bisque">
                                 <Label Text="1. Введите ФИО" InputTransparent="True" FontSize="30" 
                                        FontFamily="Montserrat" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
 
+                                <!-- Поле для ввода ФИО -->
                                 <Editor x:Name="NameEditor" FontFamily="Montserrat" 
                                         TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" 
                                         FontSize="20" Margin="10,30,5,10" HorizontalOptions="FillAndExpand" HeightRequest="50"
                                         Text="{Binding Name}"/>
                             </StackLayout>
                         </Frame>
-                        
                     </StackLayout>
 
-                    
                     <StackLayout Margin="0,20,0,0">
+                        <!-- Всплывающее окно/рамка для ввода электронной почты -->
                         <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" 
-                               HorizontalOptions="FillAndExpand" CornerRadius="10">
+           HorizontalOptions="FillAndExpand" CornerRadius="10">
                             <StackLayout BackgroundColor="Bisque">
                                 <Label Text="2. Введите электронную почту" InputTransparent="True" FontSize="30"
-                                       FontFamily="Montserrat" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
-                                
+                   FontFamily="Montserrat" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
+
+                                <!-- Поле для ввода электронной почты -->
                                 <Editor x:Name="EmailEditor" FontFamily="Montserrat"
-                                        TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий"
-                                        FontSize="20" Margin="10,30,5,10" HorizontalOptions="FillAndExpand" HeightRequest="50"/>
+                    TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий"
+                    FontSize="20" Margin="10,30,5,10" HorizontalOptions="FillAndExpand" HeightRequest="50"/>
                             </StackLayout>
                         </Frame>
                     </StackLayout>
 
                     <StackLayout Margin="0,20,0,0">
+                        <!-- Всплывающее окно/рамка для ввода номера заказа -->
                         <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" 
-                               HorizontalOptions="FillAndExpand" CornerRadius="10">
+           HorizontalOptions="FillAndExpand" CornerRadius="10">
                             <StackLayout BackgroundColor="Bisque">
                                 <Label Text="3. Введите номер заказа" InputTransparent="True" FontSize="30" 
-                                       FontFamily="Montserrat" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
-                                
+                   FontFamily="Montserrat" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
+
+                                <!-- Поле для ввода номера заказа -->
                                 <Editor x:Name="OrderNumberEditor"  FontFamily="Montserrat" 
-                                        TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" 
-                                        FontSize="20" Margin="10,30,5,10" HorizontalOptions="FillAndExpand" HeightRequest="50"/>
+                    TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" 
+                    FontSize="20" Margin="10,30,5,10" HorizontalOptions="FillAndExpand" HeightRequest="50"/>
                             </StackLayout>
                         </Frame>
                     </StackLayout>
-                </StackLayout>
-
-
-                <StackLayout>
-                <Button Text="Сохранить"
+                    
+                    <Button Text="Сохранить"
             BackgroundColor="#FEE4C3"
             HorizontalOptions="Center"
             WidthRequest="140"

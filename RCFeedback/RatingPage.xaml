@@ -14,15 +14,17 @@
 
     <ScrollView>
         <StackLayout>
+            <!-- Заголовок страницы -->
             <Label Text="RoyalCraft Furnishings Feedback"
-               FontSize="48"
-               FontFamily="Cinzel-ExtraBold"
-               HorizontalOptions="Center"
-               HorizontalTextAlignment="Center"
+                   FontSize="48"
+                   FontFamily="Cinzel-ExtraBold"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center"
                    VerticalOptions="Start"
-               TextColor="Black"
-              />
+                   TextColor="Black"
+                   />
 
+            <!-- Всплывающее окно/рамка для оценки качества мебели -->
             <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" CornerRadius="10">
                 <StackLayout BackgroundColor="Bisque" >
                     <Label Text="1. Оцените качество мебели"
@@ -30,6 +32,7 @@
                            FontFamily="Montserrat"
                            HorizontalOptions="Center">
                     </Label>
+                    <!-- Панель оценки качества мебели -->
                     <fRating:RatingBar 
                     SelectedStarValue="5"
                     ImageHeight="100"
@@ -42,13 +45,15 @@
                 </StackLayout>
             </Frame>
 
+            <!-- Всплывающее окно/рамка для оценки дизайна и эргономики мебели -->
             <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" CornerRadius="10">
                 <StackLayout BackgroundColor="Bisque" >
                     <Label Text="2. Оцените дизайн и эргономику мебели"
-               FontSize="30"
-               FontFamily="Montserrat"
-               HorizontalOptions="Center">
+                           FontSize="30"
+                           FontFamily="Montserrat"
+                           HorizontalOptions="Center">
                     </Label>
+                    <!-- Панель оценки дизайна и эргономики мебели -->
                     <fRating:RatingBar SelectedStarValue="5"
                             ImageHeight="100"
                             ImageWidth="100"
@@ -59,8 +64,7 @@
                     </fRating:RatingBar>
                 </StackLayout>
             </Frame>
-
-
+            <!-- Всплывающее окно/рамка для оценки ценовой политики -->
             <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" CornerRadius="10">
                 <StackLayout BackgroundColor="Bisque" >
                     <Label Text="3. Оцените ценовую политику"
@@ -68,6 +72,7 @@
                FontFamily="Montserrat"
                HorizontalOptions="Center">
                     </Label>
+                    <!-- Панель оценки ценовой политики -->
                     <fRating:RatingBar SelectedStarValue="5"
                             ImageHeight="100"
                             ImageWidth="100"
@@ -81,7 +86,7 @@
 
             <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" CornerRadius="10">
                 <StackLayout BackgroundColor="Bisque" >
-
+                    <!-- Всплывающее окно/рамка для оценки процесса доставки и установки мебели -->
                     <Label Text="4. Оцените процесс доставки и установки мебели" 
        FontSize="30" 
        FontFamily="Montserrat" 
@@ -90,6 +95,7 @@
        LineBreakMode="WordWrap"
                            Padding="6">
                     </Label>
+                    <!-- Панель оценки процесса доставки и установки мебели -->
                     <fRating:RatingBar SelectedStarValue="5"
                             ImageHeight="100"
                             ImageWidth="100"
@@ -105,11 +111,13 @@
 
             <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand" CornerRadius="10">
                 <StackLayout BackgroundColor="Bisque" >
+                    <!-- Всплывающее окно/рамка для добавления комментария -->
                     <Label  Text="5. Добавьте свой комментарий" FontSize="30" FontFamily="Montserrat" HorizontalOptions="Center" LineBreakMode="WordWrap"/>
+                    <!-- Поле для ввода комментария -->
                     <Editor x:Name="MyEditor"  FontFamily="Montserrat" TextChanged="OnEditorTextChanged" Placeholder="Введите ваш комментарий" FontSize="20" Margin="5,10,5,10" HorizontalOptions="FillAndExpand" HeightRequest="65"/>
                 </StackLayout>
             </Frame>
-
+            <!-- Кнопка "Сохранить" -->
             <Button Text="Сохранить"
         BackgroundColor="#FEE4C3"
         HorizontalOptions="Center"

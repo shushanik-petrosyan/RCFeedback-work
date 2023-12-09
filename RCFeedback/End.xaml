@@ -1,51 +1,57 @@
 ﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
-              x:Class="RCFeedback.End"
-                 BackgroundImageSource="background.jpg">
+             x:Class="RCFeedback.End"
+             BackgroundImageSource="background.jpg">
     <ContentPage.Background>
+        <!-- Устанавливаем фон с использованием градиентной заливки -->
         <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
             <GradientStop Color="SandyBrown" Offset="0.5" />
             <GradientStop Color="SaddleBrown" Offset="1.5" />
         </LinearGradientBrush>
+        <!-- Задаем градиентный фон для страницы -->
     </ContentPage.Background>
-    <StackLayout Margin=" 0,280,0, 0">
+    <!-- Создаем основной макет, в котором располагаем остальные элементы -->
+    <StackLayout Margin="0,280,0,0">
+        <!-- Добавляем благодарственную надпись -->
         <Label Text="Благодарим за оставленный отзыв!" 
                FontFamily="Montserrat-Bold" 
                FontSize="45"
-                TextColor="Black"
+               TextColor="Black"
                HorizontalOptions="Center"
-HorizontalTextAlignment="Center"
-               />
+               HorizontalTextAlignment="Center" />
+        <!-- Добавляем информацию о промокоде -->
         <Label Text="Предоставляем промокод на скидку 10% на повторный заказ.&#x0a;Назовите его менеджеру или введите на сайте при оформлении услуги.&#x0a;Промокод действителен до 31.12.2023"
-                          FontSize="30"
-           FontFamily="Montserrat"
-           HorizontalOptions="Center"
-           HorizontalTextAlignment="Center"
-           TextColor="Black"/>
+               FontSize="30"
+               FontFamily="Montserrat"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center"
+               TextColor="Black"/>
+        <!-- Добавляем рамку для "ОТЗЫВ23" -->
         <Frame Margin="10" Padding="6" HasShadow="True" BackgroundColor="BurlyWood" HorizontalOptions="FillAndExpand" CornerRadius="10">
             <StackLayout BackgroundColor="Bisque">
                 <Label Text="ОТЗЫВ23" InputTransparent="True" FontSize="30" FontFamily="Montserrat" HorizontalOptions="Center" LineBreakMode="WordWrap" />
+                <!-- Помещаем надпись в рамку -->
             </StackLayout>
         </Frame>
+        <!-- Добавляем изображение с использованием пакета FFImageLoading (анимированная собака) -->
         <ffimageloading:CachedImage
-      Source="dog.gif"
-      HeightRequest="300"
-      WidthRequest="400"
-      HorizontalOptions="Center"
-      Aspect="Fill"/>
+            Source="dog.gif"
+            HeightRequest="300"
+            WidthRequest="400"
+            HorizontalOptions="Center"
+            Aspect="Fill"/>
+        <!-- Устанавливаем размеры, позицию и заполняем изображение -->
+    </StackLayout>
+    <!-- Закрываем основной макет -->
+</ContentPage>
 
-        <Button Text="Сохранить"
+
+<!--<Button Text="Сохранить"
         BackgroundColor="#FEE4C3"
         HorizontalOptions="Center"
         WidthRequest="140"
         HeightRequest="60"
         CornerRadius="10" 
                 FontFamily="Montserrat"
-                    Clicked="DBButton"/>
-
-    </StackLayout>
-
-
-
-</ContentPage>
+                    Clicked="DBButton"/>-->

@@ -1,18 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+<!-- Определение страницы всплывающего окна с использованием пространства имен popup -->
 <popup:PopupPage 
-  xmlns="http://xamarin.com/schemas/2014/forms"
-  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-  xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
-  x:Class="RCFeedback.CustomErrorPopupPage">
+  xmlns="http://xamarin.com/schemas/2014/forms"  
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:popup="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    x:Class="RCFeedback.CustomErrorPopupPage">
+    <!-- Указание класса страницы CustomErrorPopupPage -->
+
+    <!-- Определение размещения элементов на абсолютной позиции -->
     <AbsoluteLayout>
+        <!-- Добавление рамки с указанием позиции, размеров, фона и отступов -->
         <Frame AbsoluteLayout.LayoutBounds="0.5, 0.5, AutoSize, AutoSize" 
               AbsoluteLayout.LayoutFlags="PositionProportional"
               BackgroundColor="Beige" Padding="20">
+            <!-- Вертикальное расположение элементов -->
             <StackLayout>
+                <!-- Добавление надписи "Ошибка" с указанием стиля, шрифта и размера -->
                 <Label Text="Ошибка" FontSize="Large" FontAttributes="Bold"
                        FontFamily="Montserrat"/>
+                <!-- Добавление надписи с текстом "Пожалуйста, заполните все поля" и указанием шрифта -->
                 <Label Text="Пожалуйста, заполните все поля" 
                        FontFamily="Montserrat"/>
+                <!-- Создание кнопки с текстом "OK" и указанием стилей, размеров и обработчика события нажатия -->
                 <Button Text="OK"
         BackgroundColor="BurlyWood"
         HorizontalOptions="Center"
@@ -20,7 +29,6 @@
         HeightRequest="50"
         CornerRadius="10"
               Clicked="OnOkClicked"/>
-                
             </StackLayout>
         </Frame>
     </AbsoluteLayout>

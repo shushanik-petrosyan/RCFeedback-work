@@ -2,16 +2,28 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RCFeedback.Menu">
+    <!-- В этой строке определены пространства имён для использования в разметке -->
+
     <ContentPage.Background>
+        <!-- Здесь задаётся фоновый элемент для страницы -->
+
         <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+            <!-- Задаётся градиентное окрашивание для фона -->
+
             <GradientStop Color="SandyBrown" Offset="0.5" />
             <GradientStop Color="SaddleBrown" Offset="1.5" />
+            <!-- Задаются параметры градиента, такие как цвета и размеры экрана для отображения градиента -->
         </LinearGradientBrush>
     </ContentPage.Background>
     <ScrollView>
+        <!-- Здесь начинается элемент прокрутки -->
+
         <StackLayout VerticalOptions="Start">
+            <!-- Здесь создаётся вертикальный контейнер для размещения других элементов -->
+
             <Image Source="logo_bezh.png" 
            Margin="90"/>
+            <!-- Добавляется изображение с отступом -->
 
             <Label Text="RoyalCraft Furnishings Feedback"
            FontSize="48"
@@ -20,6 +32,8 @@
            HorizontalTextAlignment="Center"
            TextColor="Black"
            Margin=" 0, -80,0,0"/>
+            <!-- Добавляется заголовок с определёнными стилями и отступом -->
+
             <Label Text="Благодарим Вас за покупку! "
            FontSize="30"
            FontFamily="Montserrat"
@@ -28,6 +42,8 @@
            Margin="0, 40, 0,0"
            TextColor="Black"
            />
+            <!-- Добавляется благодарственный текст с определёнными стилями и отступом -->
+
             <Label Text="Пройдите опрос об удовлетворённости услугами компании."
            FontSize="30"
            FontFamily="Montserrat"
@@ -36,6 +52,8 @@
            Margin="0, 0, 0,0"
            TextColor="Black"
            />
+            <!-- Добавляется текст с просьбой пройти опрос с определёнными стилями и отступом -->
+
             <Button Text="Начать"
     BackgroundColor="#FEE4C3"
     HorizontalOptions="Center"
@@ -46,6 +64,7 @@
     CornerRadius="10"
             Clicked="StartButton"
             />
+            <!-- Добавляется кнопка с определёнными стилями, цветом фона, шириной, высотой, отступом, скруглёнными углами и обработчиком события onClick -->
         </StackLayout>
     </ScrollView>
 </ContentPage>
