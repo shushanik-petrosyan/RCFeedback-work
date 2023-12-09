@@ -68,22 +68,25 @@ namespace RCFeedback
             {
                 // Иначе переходим на страницу оценки
                 await Navigation.PushModalAsync(new NavigationPage(new RatingPage()));
-                SaveEmail( sender, e);
+                SaveEmail(sender, e);
             }
         }
 
         private async void SaveEmail(object sender, EventArgs e)
         {
             // Получаем текст из Editor
+            string name = NameEditor.Text;
             string email = EmailEditor.Text;
+            string order = OrderNumberEditor.Text;
 
             if (!string.IsNullOrEmpty(email))
             {
-                // Создаем новый объект Feedback
+                // Создаем новый объект Feedback, заполняя все необходимые свойства
                 var newFeedback = new Feedback
                 {
-                    Email = email
-                    // Остальные свойства (Name, OrderNumber) могут быть заполнены аналогичным образом
+                    Name = name,
+                    Email = email,
+                    OrderNumber = order
                 };
 
                 // Получаем единственный экземпляр FeedbackDatabase, созданный в классе App
