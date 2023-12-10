@@ -29,11 +29,6 @@ namespace RCFeedback
             NavigationPage.SetHasNavigationBar(this, false); // Убираем навигационную панель
             CopyDatabaseToExternalStorage();
         }
-        private async void DBButton(object sender, EventArgs e)
-        {
-            await Navigation.PushModalAsync(new NavigationPage(new DBwatch())); // При нажатии кнопки "StartButton" открываем страницу PersonalInfoPage 
-            
-        }
 
 
         // Ваша текущая логика FeedbackDatabase

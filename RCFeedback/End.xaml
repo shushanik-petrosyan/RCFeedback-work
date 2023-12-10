@@ -45,13 +45,3 @@
     </StackLayout>
     <!-- Закрываем основной макет -->
 </ContentPage>
-
-
-<!--<Button Text="Сохранить"
-        BackgroundColor="#FEE4C3"
-        HorizontalOptions="Center"
-        WidthRequest="140"
-        HeightRequest="60"
-        CornerRadius="10" 
-                FontFamily="Montserrat"
-                    Clicked="DBButton"/>-->
