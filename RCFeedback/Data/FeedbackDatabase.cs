@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using RCFeedback.Models;
 using System.IO;
+using System;
+using Xamarin.Essentials;
 
 
 
@@ -53,6 +55,64 @@ namespace RCFeedback.Data
         public Task<int> DeleteItemAsync(Feedback item)
         {
             return database.DeleteAsync(item);
+        }
+
+        // Ваша текущая логика FeedbackDatabase
+        public void CopyDatabaseToExternalStorage()
+        {
+            try
+            {
+                var dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                        "FeedbackDatabase.db3");
+                var newFolderPath = Path.Combine(FileSystem.AppDataDirectory, "external");
+                var newDbPath = Path.Combine(newFolderPath, "FeedbackDatabase.db3");
+
+                if (!Directory.Exists(newFolderPath))
+                {
+                    Directory.CreateDirectory(newFolderPath);
+                }
+
+                if (File.Exists(newDbPath))
+                {
+                    File.Delete(newDbPath);
+                }
+
+                File.Copy(dbPath, newDbPath);
+
+                // Проверка успешности копирования файла
+                if (File.Exists(newDbPath))
+                {
+                    // Логирование успешного копирования
+                    System.Diagnostics.Debug.WriteLine("Database copied to external storage successfully.");
+                }
+                else
+                {
+                    // Логирование ошибки копирования
+                    System.Diagnostics.Debug.WriteLine("Database copy to external storage failed.");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Логирование ошибки при копировании
+                System.Diagnostics.Debug.WriteLine("Error while copying database to external storage: " + ex.Message);
+            }
+        }
+
+        public void ExportDatabase()
+        {
+            string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                        "FeedbackDatabase.db3");
+
+            string backupPath = "storage/emulated/0";
+
+            if (!Directory.Exists(backupPath))
+            {
+                Directory.CreateDirectory(backupPath);
+            }
+
+            string backupDbPath = Path.Combine(backupPath, "FeedbackDatabase.db3");
+
+            File.Copy(dbPath, backupDbPath, true);
         }
 
 
