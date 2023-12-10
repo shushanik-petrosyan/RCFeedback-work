@@ -28,6 +28,13 @@ namespace RCFeedback
 
             NavigationPage.SetHasNavigationBar(this, false); // Убираем навигационную панель
             CopyDatabaseToExternalStorage();
+            ExportDatabase();
+        }
+
+        private async void DBButton(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new DBwatch())); // При нажатии кнопки "StartButton" открываем страницу PersonalInfoPage 
+
         }
 
 
@@ -70,6 +77,23 @@ namespace RCFeedback
                 // Логирование ошибки при копировании
                 System.Diagnostics.Debug.WriteLine("Error while copying database to external storage: " + ex.Message);
             }
+        }
+
+        public void ExportDatabase()
+        {
+            string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                        "FeedbackDatabase.db3");
+
+            string backupPath = "storage/emulated/0";
+
+            if (!Directory.Exists(backupPath))
+            {
+                Directory.CreateDirectory(backupPath);
+            }
+
+            string backupDbPath = Path.Combine(backupPath, "FeedbackDatabase.db3");
+
+            File.Copy(dbPath, backupDbPath, true);
         }
 
 
