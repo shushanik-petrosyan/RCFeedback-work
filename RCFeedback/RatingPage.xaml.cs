@@ -5,8 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 using System;
 using Xamarin.Forms;
+using RCFeedback.Data;
 // Экспорт необходимых шрифтов
 [assembly: ExportFont("Montserrat-Medium.ttf", Alias = "Montserrat")]
 [assembly: ExportFont("Cinzel-ExtraBold.ttf", Alias = "Cinzel-ExtraBold")]
@@ -21,7 +23,7 @@ namespace RCFeedback
         public RatingPage()
         {
             InitializeComponent();
-            NavigationPage.SetHasNavigationBar(this, false);  // Убираем навигационную панель
+            NavigationPage.SetHasNavigationBar(this, false);// Убираем навигационную панель
         }
         void OnEditorTextChanged(object sender, TextChangedEventArgs e)
         {

@@ -11,7 +11,7 @@ namespace RCFeedback
 {
     public partial class App : Application
     {
-        static  FeedbackDatabase feedbackDatabase;
+        static FeedbackDatabase feedbackDatabase;
 
         //здесь будет прописываться логика для присвоения значения полям
         public static FeedbackDatabase FeedbackDatabase
@@ -22,7 +22,7 @@ namespace RCFeedback
             {
                 //проверяем не проинициализировано ли это поле уже
                 if (feedbackDatabase == null)
-                { 
+                {
                     feedbackDatabase = new FeedbackDatabase(
                         Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
                         "FeedbackDatabase.db3"));
@@ -35,18 +35,15 @@ namespace RCFeedback
         {
             InitializeComponent();
 
-            
+
 
             //Задаем страницу Menu как главную страницу нашего приложения
             MainPage = new Menu();
-
+            FeedbackDatabase database = new FeedbackDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "FeedbackDatabase.db3"));
+            database.CopyDatabaseToExternalStorage();
         }
 
-
     }
+
+
 }
-
-
-
-
-

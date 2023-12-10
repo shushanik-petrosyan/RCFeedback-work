@@ -81,6 +81,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="com.ghisler.android.totalcommander_3.42_1191.apk" />
+    <None Include="com.google.android.apps.nbu.files-661762.apk" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />

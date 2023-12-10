@@ -21,6 +21,7 @@ namespace RCFeedback.Droid
             base.OnCreate(savedInstanceState);
 
 
+
             // Инициализация платформенных сервисов Xamarin Essentials
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
 
@@ -47,5 +48,6 @@ namespace RCFeedback.Droid
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
     }
 }
