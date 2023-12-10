@@ -2,10 +2,12 @@
 using Xamarin.Forms.Xaml;
 using RCFeedback;
 using System.Transactions;
+using Xamarin.Essentials;
 
 using Xamarin.Forms;
 using RCFeedback.Data;
 using System.IO;
+using Xamarin.Forms.PlatformConfiguration;
 
 namespace RCFeedback
 {
@@ -22,10 +24,13 @@ namespace RCFeedback
             {
                 //проверяем не проинициализировано ли это поле уже
                 if (feedbackDatabase == null)
-                { 
+                {
+                 
+                    string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                        "FeedbackDatabase.db3");
+
                     feedbackDatabase = new FeedbackDatabase(
-                        Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-                        "FeedbackDatabase.db3"));
+                       dbPath);
                     //название файла с базой данных
                 }
                 return feedbackDatabase;
@@ -40,7 +45,11 @@ namespace RCFeedback
             //Задаем страницу Menu как главную страницу нашего приложения
             MainPage = new Menu();
 
+
         }
+
+
+
 
 
     }

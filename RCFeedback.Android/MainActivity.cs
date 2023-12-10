@@ -3,6 +3,8 @@ using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
+using Android;
+using System.IO;
 
 namespace RCFeedback.Droid
 {
@@ -35,6 +37,7 @@ namespace RCFeedback.Droid
 
             // Загрузка главного приложения
             LoadApplication(new App());
+
         }
 
 
@@ -45,7 +48,12 @@ namespace RCFeedback.Droid
             // Передача результатов запроса разрешений в Xamarin Essentials для обработки
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
+  
+
+
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
+
+
     }
 }
