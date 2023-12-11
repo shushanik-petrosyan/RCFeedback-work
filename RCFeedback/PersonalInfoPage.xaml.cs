@@ -81,9 +81,6 @@ namespace RCFeedback
 
             // Используем FeedbackDatabase для сохранения данных
             await db.SaveItemAsync(newFeedback);
-
-            // Оповещение пользователя об успешном сохранении
-            await DisplayAlert("Сохранено", "Ваша электронная почта сохранена", "OK");
         }
 
 

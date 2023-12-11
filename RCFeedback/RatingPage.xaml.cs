@@ -63,9 +63,6 @@ namespace RCFeedback
 
                 // Используем FeedbackDatabase для сохранения обновленного объекта Feedback
                 await db.SaveItemAsync(_feedback);
-
-                // Оповещение пользователя об успешном сохранении
-                await DisplayAlert("Сохранено", "Ваш комментарий сохранен", "OK");
         }
     }
 }
