@@ -1,17 +1,8 @@
 ﻿// Подключение необходимых библиотек
-using Rg.Plugins.Popup.Pages;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Rg.Plugins.Popup.Services;
 using System;
-using System.IO;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Xamarin.Essentials;
-using RCFeedback.Data;
 using RCFeedback.Models;
 
 // Экспорт необходимых шрифтов

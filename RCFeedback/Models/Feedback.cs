@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using SQLite; // Импорт библиотеки SQLite
+﻿using SQLite; // Импорт библиотеки SQLite
 
 namespace RCFeedback.Models
 {

@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-// Подключение необходимых библиотек
-using System.Text;
-using System.Threading.Tasks;
+﻿// Подключение необходимых библиотек
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 // Экспорт необходимых шрифтов

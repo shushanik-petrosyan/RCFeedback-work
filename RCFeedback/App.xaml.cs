@@ -1,13 +1,7 @@
 ﻿using System;
-using Xamarin.Forms.Xaml;
-using RCFeedback;
-using System.Transactions;
-using Xamarin.Essentials;
-
 using Xamarin.Forms;
 using RCFeedback.Data;
 using System.IO;
-using Xamarin.Forms.PlatformConfiguration;
 
 namespace RCFeedback
 {
