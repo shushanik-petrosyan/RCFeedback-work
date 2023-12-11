@@ -62,10 +62,12 @@ namespace RCFeedback.Data
         {
             try
             {
+                Console.WriteLine("I m here");
                 var dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
                         "FeedbackDatabase.db3");
-                var newFolderPath = Path.Combine(FileSystem.AppDataDirectory, "external");
+                var newFolderPath = "/storage/emulated/0";
                 var newDbPath = Path.Combine(newFolderPath, "FeedbackDatabase.db3");
+                Console.WriteLine(newDbPath);
 
                 if (!Directory.Exists(newFolderPath))
                 {
@@ -83,41 +85,20 @@ namespace RCFeedback.Data
                 if (File.Exists(newDbPath))
                 {
                     // Логирование успешного копирования
-                    System.Diagnostics.Debug.WriteLine("Database copied to external storage successfully.");
+                    Console.WriteLine("Database copied to external storage successfully.");
                 }
                 else
                 {
                     // Логирование ошибки копирования
-                    System.Diagnostics.Debug.WriteLine("Database copy to external storage failed.");
+                    Console.WriteLine("Database copy to external storage failed.");
                 }
             }
             catch (Exception ex)
             {
                 // Логирование ошибки при копировании
-                System.Diagnostics.Debug.WriteLine("Error while copying database to external storage: " + ex.Message);
+                Console.WriteLine("Error while copying database to external storage: " + ex.Message);
             }
         }
-
-        public void ExportDatabase()
-        {
-            string dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
-                        "FeedbackDatabase.db3");
-
-            string backupPath = "storage/emulated/0";
-
-            if (!Directory.Exists(backupPath))
-            {
-                Directory.CreateDirectory(backupPath);
-            }
-
-            string backupDbPath = Path.Combine(backupPath, "FeedbackDatabase.db3");
-
-            File.Copy(dbPath, backupDbPath, true);
-        }
-
-
-
-
     }
 }
 

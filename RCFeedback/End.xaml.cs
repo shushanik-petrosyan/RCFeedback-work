@@ -26,22 +26,11 @@ namespace RCFeedback
         public End()
         {
             InitializeComponent();
-
             NavigationPage.SetHasNavigationBar(this, false); // Убираем навигационную панель
             _feedbackDatabase = new FeedbackDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
                         "FeedbackDatabase.db3"));
             _feedbackDatabase.CopyDatabaseToExternalStorage();
-            _feedbackDatabase.ExportDatabase();
 
         }
-
-        private async void DBButton(object sender, EventArgs e)
-        {
-            await Navigation.PushModalAsync(new NavigationPage(new DBwatch())); // При нажатии кнопки "StartButton" открываем страницу PersonalInfoPage 
-
-
-        }
-
-
     }
 }
