@@ -50,18 +50,13 @@ namespace RCFeedback
 
         private async void SaveFeedback()
         {
-            // Получаем текст из Editor
-            string comment = MyEditor.Text;
 
-            if (!string.IsNullOrEmpty(comment))
-            {
-
-                // Заполняем поле комментария в сохраненном объекте Feedback
-                _feedback.Comment = comment;
-                //_feedback.QualityRating = QualityRatingBar.SelectedStarValue;
-               // _feedback.DesignRating = DesignRatingBar.SelectedStarValue;
-                //_feedback.PriceRating = PricePolicyRatingBar.SelectedStarValue;
-               // _feedback.DeliveryRating = DeliveryRatingBar.SelectedStarValue;
+                // Заполняем поля комментария в сохраненном объекте Feedback
+                _feedback.Comment = MyEditor.Text;
+                _feedback.QualityRating = QualityRatingBar.SelectedStarValue;
+                _feedback.DesignRating = DesignRatingBar.SelectedStarValue;
+                _feedback.PriceRating = PricePolicyRatingBar.SelectedStarValue;
+                _feedback.DeliveryRating = DeliveryRatingBar.SelectedStarValue;
 
                 // Получаем экземпляр FeedbackDatabase
                 var db = App.FeedbackDatabase;
@@ -71,7 +66,6 @@ namespace RCFeedback
 
                 // Оповещение пользователя об успешном сохранении
                 await DisplayAlert("Сохранено", "Ваш комментарий сохранен", "OK");
-            }
         }
     }
 }
