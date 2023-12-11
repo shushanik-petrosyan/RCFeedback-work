@@ -4,6 +4,8 @@ using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using RCFeedback.Models;
+using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 // Экспорт необходимых шрифтов
 [assembly: ExportFont("Montserrat-Medium.ttf", Alias = "Montserrat")]
@@ -57,38 +59,31 @@ namespace RCFeedback
             }
             else
             {
-                // Иначе переходим на страницу оценки
-                await Navigation.PushModalAsync(new NavigationPage(new RatingPage()));
-                SaveEmail(sender, e);
+                var newFeedback = new Feedback(); // Создаем новый объект обратной связи
+                SavePersonalInfo(newFeedback); // Вызываем функцию для сохранения личной информации
+                await Navigation.PushModalAsync(new NavigationPage(new RatingPage(newFeedback))); // Добавляем страницу рейтинга в стек навигации
             }
         }
-
-        private async void SaveEmail(object sender, EventArgs e)
+        private async void SavePersonalInfo(Feedback newFeedback)
         {
             // Получаем текст из Editor
             string name = NameEditor.Text;
             string email = EmailEditor.Text;
             string order = OrderNumberEditor.Text;
 
-            if (!string.IsNullOrEmpty(email))
-            {
-                // Создаем новый объект Feedback, заполняя все необходимые свойства
-                var newFeedback = new Feedback
-                {
-                    Name = name,
-                    Email = email,
-                    OrderNumber = order
-                };
+            // Присваиваем полученные значения свойствам объекта newFeedback
+            newFeedback.Name = name;
+            newFeedback.Email = email;
+            newFeedback.OrderNumber = order;
 
-                // Получаем единственный экземпляр FeedbackDatabase, созданный в классе App
-                var db = App.FeedbackDatabase;
+            // Получаем единственный экземпляр FeedbackDatabase, созданный в классе App
+            var db = App.FeedbackDatabase;
 
-                // Используем FeedbackDatabase для сохранения данных
-                await db.SaveItemAsync(newFeedback);
+            // Используем FeedbackDatabase для сохранения данных
+            await db.SaveItemAsync(newFeedback);
 
-                // Оповещение пользователя об успешном сохранении
-                await DisplayAlert("Сохранено", "Ваша электронная почта сохранена", "OK");
-            }
+            // Оповещение пользователя об успешном сохранении
+            await DisplayAlert("Сохранено", "Ваша электронная почта сохранена", "OK");
         }
 
 

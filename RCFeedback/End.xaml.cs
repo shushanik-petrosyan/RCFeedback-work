@@ -19,10 +19,16 @@ namespace RCFeedback
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false); // Убираем навигационную панель
+
+
+
+
             _feedbackDatabase = new FeedbackDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
                         "FeedbackDatabase.db3"));
             _feedbackDatabase.CopyDatabaseToExternalStorage();
 
         }
+
+       
     }
 }

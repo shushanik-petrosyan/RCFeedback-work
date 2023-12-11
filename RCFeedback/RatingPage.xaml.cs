@@ -1,21 +1,26 @@
 ﻿// Подключение необходимых библиотек 
+using RCFeedback.Models;
 using System;
+using System.Xml.Linq;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 // Экспорт необходимых шрифтов
 [assembly: ExportFont("Montserrat-Medium.ttf", Alias = "Montserrat")]
 [assembly: ExportFont("Cinzel-ExtraBold.ttf", Alias = "Cinzel-ExtraBold")]
 [assembly: ExportFont("Montserrat-VariableFont_wght.ttf", Alias = "Montserrat1")]
 
-
 namespace RCFeedback
 {
     public partial class RatingPage : ContentPage
     {
-       
-        public RatingPage()
+        private Feedback _feedback; // поле класса для хранения переданного объекта feedback
+
+        public RatingPage(Feedback feedback)
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);  // Убираем навигационную панель
+
+            _feedback = feedback; // сохраняем переданный объект feedback в поле класса _feedback
         }
         void OnEditorTextChanged(object sender, TextChangedEventArgs e)
         {
@@ -38,9 +43,36 @@ namespace RCFeedback
 
         private async void EndButton(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new NavigationPage(new End())); // При нажатии кнопки "StartButton" открываем страницу PersonalInfoPage 
-
+            SaveFeedback();
+            await Navigation.PushModalAsync(new NavigationPage(new End()));
+            
         }
 
+        private async void SaveFeedback()
+        {
+            // Получаем текст из Editor
+            string comment = MyEditor.Text;
+
+            if (!string.IsNullOrEmpty(comment))
+            {
+
+                // Заполняем поле комментария в сохраненном объекте Feedback
+                _feedback.Comment = comment;
+                //_feedback.QualityRating = QualityRatingBar.SelectedStarValue;
+               // _feedback.DesignRating = DesignRatingBar.SelectedStarValue;
+                //_feedback.PriceRating = PricePolicyRatingBar.SelectedStarValue;
+               // _feedback.DeliveryRating = DeliveryRatingBar.SelectedStarValue;
+
+                // Получаем экземпляр FeedbackDatabase
+                var db = App.FeedbackDatabase;
+
+                // Используем FeedbackDatabase для сохранения обновленного объекта Feedback
+                await db.SaveItemAsync(_feedback);
+
+                // Оповещение пользователя об успешном сохранении
+                await DisplayAlert("Сохранено", "Ваш комментарий сохранен", "OK");
+            }
+        }
     }
 }
+

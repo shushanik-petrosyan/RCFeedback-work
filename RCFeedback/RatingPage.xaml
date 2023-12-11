@@ -34,6 +34,7 @@
                     </Label>
                     <!-- Панель оценки качества мебели -->
                     <fRating:RatingBar 
+                        x:Name= "QualityRatingBar"
                     SelectedStarValue="5"
                     ImageHeight="100"
                     ImageWidth="100"
@@ -55,6 +56,7 @@
                     </Label>
                     <!-- Панель оценки дизайна и эргономики мебели -->
                     <fRating:RatingBar SelectedStarValue="5"
+                                       x:Name= "DesignRatingBar"
                             ImageHeight="100"
                             ImageWidth="100"
                             HorizontalOptions="Center"
@@ -73,7 +75,9 @@
                HorizontalOptions="Center">
                     </Label>
                     <!-- Панель оценки ценовой политики -->
-                    <fRating:RatingBar SelectedStarValue="5"
+                    <fRating:RatingBar 
+                        x:Name= "PricePolicyRatingBar"
+                        SelectedStarValue="5"
                             ImageHeight="100"
                             ImageWidth="100"
                             HorizontalOptions="Center"
@@ -96,7 +100,9 @@
                            Padding="6">
                     </Label>
                     <!-- Панель оценки процесса доставки и установки мебели -->
-                    <fRating:RatingBar SelectedStarValue="5"
+                    <fRating:RatingBar 
+                        x:Name= "DeliveryRatingBar"
+                        SelectedStarValue="5"
                             ImageHeight="100"
                             ImageWidth="100"
                             HorizontalOptions="Center"
