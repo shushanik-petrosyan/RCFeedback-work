@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System;
 using Xamarin.Forms;
 using RCFeedback.Data;
+using RCFeedback.Models;
 // Экспорт необходимых шрифтов
 [assembly: ExportFont("Montserrat-Medium.ttf", Alias = "Montserrat")]
 [assembly: ExportFont("Cinzel-ExtraBold.ttf", Alias = "Cinzel-ExtraBold")]
@@ -19,11 +20,17 @@ namespace RCFeedback
 {
     public partial class RatingPage : ContentPage
     {
-       
-        public RatingPage()
+        private string _name;
+        private string _email;
+        private string _orderNumber;
+
+        public RatingPage(string name, string email, string orderNumber)
         {
             InitializeComponent();
             NavigationPage.SetHasNavigationBar(this, false);// Убираем навигационную панель
+            _name = name;
+            _email = email;
+            _orderNumber = orderNumber;
         }
         void OnEditorTextChanged(object sender, TextChangedEventArgs e)
         {
@@ -46,9 +53,24 @@ namespace RCFeedback
 
         private async void EndButton(object sender, EventArgs e)
         {
+            var feedback = new Feedback
+            {
+                Name = _name,
+                Email = _email,
+                OrderNumber = _orderNumber,
+                QualityRating = QualityRatingBar.SelectedStarValue,
+                DesignRating = DesignRatingBar.SelectedStarValue,
+                PriceRating = PricePolicyRatingBar.SelectedStarValue,
+                DeliveryRating = DeliveryRatingBar.SelectedStarValue,
+                Comment = MyEditor.Text
+            };
+
+
+            await App.FeedbackDatabase.SaveItemAsync(feedback);
             await Navigation.PushModalAsync(new NavigationPage(new End())); // При нажатии кнопки "StartButton" открываем страницу PersonalInfoPage 
 
         }
+
 
     }
 }

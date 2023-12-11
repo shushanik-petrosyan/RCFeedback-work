@@ -39,8 +39,6 @@ namespace RCFeedback
 
             //Задаем страницу Menu как главную страницу нашего приложения
             MainPage = new Menu();
-            FeedbackDatabase database = new FeedbackDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "FeedbackDatabase.db3"));
-            database.CopyDatabaseToExternalStorage();
         }
 
     }

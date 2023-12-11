@@ -87,6 +87,8 @@
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
     <None Include="Resources\drawable\.editorconfig" />
+    <None Include="SQLite Browser_1.5_apkcombo.com.apk" />
+    <None Include="SQLite Viewer_0.16.7_Apkpure.apk" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icon.png">

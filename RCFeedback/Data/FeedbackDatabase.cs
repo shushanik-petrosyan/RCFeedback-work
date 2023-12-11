@@ -61,12 +61,10 @@ namespace RCFeedback.Data
         {
             try
             {
-                Console.WriteLine("I m here");
                 var dbPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
                         "FeedbackDatabase.db3");
-                var newFolderPath = Path.Combine("/storage/emulated/0", "external");
+                var newFolderPath = "/storage/emulated/0/";
                 var newDbPath = Path.Combine(newFolderPath, "FeedbackDatabase.db3");
-                Console.WriteLine(newDbPath);
 
                 if (!Directory.Exists(newFolderPath))
                 {
