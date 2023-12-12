@@ -66,10 +66,12 @@ namespace RCFeedback
             }
             else
             {
-                var name = NameEditor.Text;
-                var email = EmailEditor.Text;
-                var orderNumber = OrderNumberEditor.Text;
+                // Получаем значения из редакторов
+                var name = NameEditor.Text; // Получаем имя из текстового редактора
+                var email = EmailEditor.Text; // Получаем адрес электронной почты из текстового редактора
+                var orderNumber = OrderNumberEditor.Text; // Получаем номер заказа из текстового редактора
 
+                // Ожидаем завершения перехода к новой странице
                 await Navigation.PushModalAsync(new NavigationPage(new RatingPage(name, email, orderNumber)));
             }
         }
