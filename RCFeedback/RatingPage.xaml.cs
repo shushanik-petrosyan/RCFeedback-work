@@ -24,6 +24,9 @@ namespace RCFeedback
         private string _email;
         private string _orderNumber;
 
+        //При создании объекта этого класса, она инициализирует компоненты страницы, убирает навигационную панель 
+        //и устанавливает значения для полей _name, _email и _orderNumber на основе переданных параметров name, email 
+        // и orderNumber соответственно.
         public RatingPage(string name, string email, string orderNumber)
         {
             InitializeComponent();
@@ -50,7 +53,8 @@ namespace RCFeedback
             // Устанавливаем новую высоту
             editor.HeightRequest = newHeight;
         }
-
+        
+        // Данная функция при срабатывает при нажати кнопки сохранения
         private async void EndButton(object sender, EventArgs e)
         {
              // Создаем новый объект обратной связи
