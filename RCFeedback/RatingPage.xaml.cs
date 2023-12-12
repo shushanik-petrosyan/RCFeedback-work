@@ -53,11 +53,14 @@ namespace RCFeedback
 
         private async void EndButton(object sender, EventArgs e)
         {
+             // Создаем новый объект обратной связи
             var feedback = new Feedback
             {
+                // Присваиваем имя, почту, номер заказа из приватных полей
                 Name = _name,
                 Email = _email,
                 OrderNumber = _orderNumber,
+                 // Присваиваем оценку из компонентов QualityRatingBar
                 QualityRating = QualityRatingBar.SelectedStarValue,
                 DesignRating = DesignRatingBar.SelectedStarValue,
                 PriceRating = PricePolicyRatingBar.SelectedStarValue,
