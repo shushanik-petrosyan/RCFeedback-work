@@ -24,16 +24,13 @@ namespace RCFeedback
         public End()
         {
             InitializeComponent();
+             // Убираем навигационную панель
+            NavigationPage.SetHasNavigationBar(this, false);
 
-            NavigationPage.SetHasNavigationBar(this, false); // Убираем навигационную панель
+            // Инициализируем базу данных обратной связи и копируем ее во внешнее хранилище
             _feedbackDatabase = new FeedbackDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
                      "FeedbackDatabase.db3")); 
             _feedbackDatabase.CopyDatabaseToExternalStorage();
-        }
-        private async void DBButton(object sender, EventArgs e)
-        {
-            await Navigation.PushModalAsync(new NavigationPage(new DBwatch())); // При нажатии кнопки "StartButton" открываем страницу PersonalInfoPage 
-
         }
 
     }
