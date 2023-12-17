@@ -96,7 +96,44 @@ namespace RCFeedback.Data
                 Console.WriteLine("Error while copying database to external storage: " + ex.Message);
             }
         }
-    }
+
+        //эта функция на с++
+    //    namespace fs = std::experimental::filesystem;
+    //    void CopyDatabaseToExternalStorage()
+    //    {
+    //        try
+    //        {
+    //            std::string dbPath = fs::path(fs::temp_directory_path()) / "FeedbackDatabase.db3";
+    //            std::string newFolderPath = "/storage/emulated/0/";
+    //            std::string newDbPath = newFolderPath + "FeedbackDatabase.db3";
+
+    //            if (!fs::exists(newFolderPath))
+    //            {
+    //                fs::create_directory(newFolderPath);
+    //            }
+
+    //            if (fs::exists(newDbPath))
+    //            {
+    //                fs::remove(newDbPath);
+    //            }
+
+    //            fs::copy_file(dbPath, newDbPath);
+
+    //            if (fs::exists(newDbPath))
+    //            {
+    //                std::cout << "Database copied to external storage successfully." << std::endl;
+    //            }
+    //            else
+    //            {
+    //                std::cout << "Database copy to external storage failed." << std::endl;
+    //            }
+    //        }
+    //        catch (const std::exception &ex)
+    //{
+    //            std::cout << "Error while copying database to external storage: " << ex.what() << std::endl;
+    //        }
+    //        }
+        }
 }
 
 

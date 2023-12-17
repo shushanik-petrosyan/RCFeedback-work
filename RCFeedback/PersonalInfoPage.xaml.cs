@@ -75,7 +75,32 @@ namespace RCFeedback
                 await Navigation.PushModalAsync(new NavigationPage(new RatingPage(name, email, orderNumber)));
             }
         }
-    }
+        
+        // на С++
+        //void AddItemButton(Object^ sender, RoutedEventArgs^ e)
+        //{
+        //    if (String::IsNullOrWhiteSpace(NameEditor->Text) || String::IsNullOrWhiteSpace(EmailEditor->Text) || String::IsNullOrWhiteSpace(OrderNumberEditor->Text))
+        //    {
+        //        PopupNavigation::PushAsync(ref new CustomErrorPopupPage());
+        //    }
+        //    else
+        //    {
+        //        String ^ name = NameEditor->Text; // Получаем имя из текстового редактора
+        //        String ^ email = EmailEditor->Text; // Получаем адрес электронной почты из текстового редактора
+        //        String ^ orderNumber = OrderNumberEditor->Text; // Получаем номер заказа из текстового редактора
+
+        //        auto ratingPage = ref new RatingPage(name, email, orderNumber);
+        //        auto navigationPage = ref new NavigationPage(ratingPage);
+        //        Navigation::PushModalAsync(navigationPage);
+        //    }
+        //}
+
+        //    подразумеваются следующие бибилиотеки на С++
+        //    using namespace Platform;
+        //    using namespace Windows::UI::Xaml::Controls;
+        //    using namespace Windows::UI::Xaml::Navigation;
+        //    using namespace Rg.Plugins.Popup.Services;
+}
 }
 
       

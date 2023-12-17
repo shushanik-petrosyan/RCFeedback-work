@@ -53,7 +53,20 @@ namespace RCFeedback
             // Устанавливаем новую высоту
             editor.HeightRequest = newHeight;
         }
-        
+
+        // Функция на С++
+        //void OnEditorTextChanged(void* sender, TextChangedEventArgs& e)
+        //{
+        //    Editor* editor = static_cast<Editor*>(sender);
+        //    int lineHeight = 20;
+        //    std::string text = editor->Text();
+        //    int lineCount = std::count(text.begin(), text.end(), '\n') + 1;
+        //    int minHeight = 110;
+        //    int maxHeight = 10000;
+        //    int newHeight = std::max(minHeight, std::min(maxHeight, lineHeight * lineCount));
+        //   editor->SetHeightRequest(newHeight);
+        //}
+
         // Данная функция при срабатывает при нажати кнопки сохранения
         private async void EndButton(object sender, EventArgs e)
         {
